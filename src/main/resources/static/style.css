@@ -1,0 +1,83 @@
+/* ページ全体の背景 */
+body {
+    background-color: #f0f0f0; /* ページ全体の背景色 */
+    font-family: Arial, sans-serif; /* フォントファミリー */
+    text-align: center; /* すべての文字を中央揃え */
+}
+
+/* テーブルのスタイル */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto; /* テーブルを中央に配置 */
+    background-color: white; /* テーブルの背景色を白に */
+    border: solid 2px black; /* テーブル全体のボーダーを黒に */
+}
+
+table tr {
+    background-color: white; /* 行の背景色を白に */
+}
+
+table th, table td {
+    text-align: center; /* テーブル内の文字を中央揃え */
+    border: solid 2px black; /* ボーダーを黒に */
+    color: black; /* テーブルの文字色を黒に */
+    padding: 10px 0;
+}
+
+/* 最後の行のボーダーを指定 */
+table tr:last-child th, table tr:last-child td {
+    border-bottom: solid 2px black; /* 最後の行の下にボーダーを追加 */
+}
+
+/* テーブルの外にあるパディング */
+.table-wrapper {
+    padding: 20px; /* テーブルの周囲に余白を追加 */
+    background-color: #ffffff; /* テーブルの背景色 */
+    border-radius: 8px; /* 角を丸くする */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* シャドウ効果 */
+}
+
+/* 見出しのスタイル */
+h1, h2, h3 {
+    color: #333; /* テキストカラー */
+    text-align: center; /* 中央揃え */
+}
+
+/* ボタンスタイル */
+.button {
+    background-color: #007BFF; /* ボタンの背景色 */
+    color: white; /* ボタンの文字色 */
+    padding: 10px 20px; /* 内側の余白 */
+    border: none; /* ボーダーなし */
+    border-radius: 5px; /* 角を丸くする */
+    text-decoration: none; /* アンダーラインなし */
+    display: inline-block; /* インラインブロック */
+    margin: 10px; /* 外側の余白 */
+}
+
+.button:hover {
+    background-color: #0056b3; /* ホバー時の背景色 */
+}
+
+.weight-container, .reps-container {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    width: 100px; /* 数字部分の幅 */
+}
+
+.best-label {
+    display: block;       /* インラインからブロック要素にして改行を挿入 */
+    font-size: 12px;      /* フォントサイズを小さくする */
+    margin-top: 5px;      /* 上に余白を追加してkgと自己ベストの間隔を広げる */
+    color: red;           /* 自己ベストの文字色を赤に */
+    text-align: center;
+}
+
+.red{
+    color: red;
+}
+.invalid{
+    border:2px solid red;
+}

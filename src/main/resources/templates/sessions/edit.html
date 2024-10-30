@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org"
+    th:replace="~{base :: layout(~{::title},~{::body/content()})}">
+<head>
+    <meta charset="UTF-8">
+    <title>セッションの更新</title>
+</head>
+<body>
+    <h1>セッションの更新</h1>
+    <form th:action="@{/user/sessions/edit}" th:object="${sessionDTO}" th:method="post">
+        <input type="hidden" th:field="*{id}">
+        <!--type="hidden"にすれば表示されない（ユーザーに変更されない）でidをpostできる-->
+        <label>日付</label>
+        <input type="date" th:field="*{date}" th:errorclass="invalid"><br>
+        <div class="red" th:errors="*{date}"></div>
+        <label>部位</label>
+        <select id="bodyPartId" th:field="*{bodyPart.id}" th:errorclass="invalid">
+            <option value="" disabled selected>部位を選択</option>
+            <option th:each="bodyPart : ${bodyParts}" th:value="${bodyPart.id}" th:text="${bodyPart.name}"></option>
+        </select>
+        <div class="red" th:errors="*{bodyPart}"></div>
+        <p><button type="submit">登録</button></p>
+    </form>
+</body>
+</html>

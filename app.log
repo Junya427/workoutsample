@@ -1,0 +1,59 @@
+2024-10-27T19:27:02.116+09:00  INFO 28498 --- [main] c.e.w.WorkoutsampleApplication           : Starting WorkoutsampleApplication using Java 21.0.2 with PID 28498 (/Users/junya/webApp/workoutsample/build/classes/java/main started by junya in /Users/junya/webApp/workoutsample)
+2024-10-27T19:27:02.163+09:00  INFO 28498 --- [main] c.e.w.WorkoutsampleApplication           : No active profile set, falling back to 1 default profile: "default"
+2024-10-27T19:27:05.098+09:00  INFO 28498 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-27T19:27:05.271+09:00  INFO 28498 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 137 ms. Found 6 JPA repository interfaces.
+2024-10-27T19:27:06.783+09:00  INFO 28498 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-10-27T19:27:06.831+09:00  INFO 28498 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-27T19:27:06.832+09:00  INFO 28498 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-10-27T19:27:07.062+09:00  INFO 28498 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-10-27T19:27:07.063+09:00  INFO 28498 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4697 ms
+2024-10-27T19:27:07.647+09:00  INFO 28498 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-27T19:27:07.848+09:00  INFO 28498 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-10-27T19:27:08.122+09:00  INFO 28498 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-27T19:27:09.310+09:00  INFO 28498 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-27T19:27:09.420+09:00  INFO 28498 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-10-27T19:27:10.059+09:00  INFO 28498 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5d717f19
+2024-10-27T19:27:10.062+09:00  INFO 28498 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-10-27T19:27:12.805+09:00  INFO 28498 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-27T19:27:13.435+09:00  INFO 28498 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-27T19:27:14.792+09:00  INFO 28498 --- [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2024-10-27T19:27:15.037+09:00  INFO 28498 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-10-27T19:27:16.233+09:00  INFO 28498 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-10-27T19:27:16.258+09:00  INFO 28498 --- [main] c.e.w.WorkoutsampleApplication           : Started WorkoutsampleApplication in 15.453 seconds (process running for 17.297)
+2024-10-27T19:27:20.545+09:00  INFO 28498 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-27T19:27:20.548+09:00  INFO 28498 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-10-27T19:27:20.552+09:00  INFO 28498 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-10-27T19:27:41.995+09:00  INFO 28498 --- [http-nio-8080-exec-5] c.e.workoutsample.config.SecurityConfig  : Redirecting to: /user/sessions
+2024-10-27T19:28:23.647+09:00  INFO 28498 --- [http-nio-8080-exec-1] c.e.workoutsample.config.SecurityConfig  : Redirecting to: /user/sessions
+2024-10-27T19:31:37.746+09:00  INFO 28498 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-27T19:31:37.774+09:00  INFO 28498 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-27T19:31:37.791+09:00  INFO 28498 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-10-27T19:31:48.111+09:00  INFO 28729 --- [main] c.e.w.WorkoutsampleApplication           : Starting WorkoutsampleApplication using Java 21.0.2 with PID 28729 (/Users/junya/webApp/workoutsample/build/classes/java/main started by junya in /Users/junya/webApp/workoutsample)
+2024-10-27T19:31:48.117+09:00  INFO 28729 --- [main] c.e.w.WorkoutsampleApplication           : No active profile set, falling back to 1 default profile: "default"
+2024-10-27T19:31:50.550+09:00  INFO 28729 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-27T19:31:50.706+09:00  INFO 28729 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 128 ms. Found 6 JPA repository interfaces.
+2024-10-27T19:31:52.007+09:00  INFO 28729 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-10-27T19:31:52.052+09:00  INFO 28729 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-27T19:31:52.053+09:00  INFO 28729 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-10-27T19:31:52.184+09:00  INFO 28729 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-10-27T19:31:52.185+09:00  INFO 28729 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3865 ms
+2024-10-27T19:31:52.551+09:00  INFO 28729 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-27T19:31:52.714+09:00  INFO 28729 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-10-27T19:31:52.790+09:00  INFO 28729 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-27T19:31:53.457+09:00  INFO 28729 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-27T19:31:53.519+09:00  INFO 28729 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-10-27T19:31:53.869+09:00  INFO 28729 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@56835f2f
+2024-10-27T19:31:53.872+09:00  INFO 28729 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-10-27T19:31:56.272+09:00  INFO 28729 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-27T19:31:56.436+09:00  INFO 28729 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-27T19:31:57.487+09:00  INFO 28729 --- [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2024-10-27T19:31:57.676+09:00  INFO 28729 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-10-27T19:31:59.095+09:00  INFO 28729 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-10-27T19:31:59.120+09:00  INFO 28729 --- [main] c.e.w.WorkoutsampleApplication           : Started WorkoutsampleApplication in 12.415 seconds (process running for 13.856)
+2024-10-27T19:32:03.197+09:00  INFO 28729 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-27T19:32:03.199+09:00  INFO 28729 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-10-27T19:32:03.202+09:00  INFO 28729 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2024-10-27T19:32:11.887+09:00  INFO 28729 --- [http-nio-8080-exec-3] c.e.workoutsample.config.SecurityConfig  : Redirecting to: /admin/users
+2024-10-27T19:34:32.051+09:00  INFO 28729 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-27T19:34:32.059+09:00  INFO 28729 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-27T19:34:32.064+09:00  INFO 28729 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

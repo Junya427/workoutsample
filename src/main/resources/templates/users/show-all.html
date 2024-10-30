@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org"
+    th:replace="~{base :: layout(~{::title},~{::body/content()})}">
+<head>
+    <meta charset="UTF-8">
+    <title>ユーザーリスト</title>
+</head>
+<body>
+    <h1>ユーザー一覧</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>ユーザーネーム</th>
+                <th>アカウント</th>
+                <th>権限</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="user : ${users}">
+                <td th:text="${user.id}">ID</td>
+                <td th:text="${user.username}">ユーザーネーム</td>
+                <td th:text="${user.enabled} ? '有効' : '無効'">アカウント</td>
+                <td>
+                    <div th:each="authority : ${user.authorities}">
+                        <span th:switch="${authority.authority}">
+                            <span th:case="'ROLE_ADMIN'">管理者</span>
+                            <span th:case="'ROLE_USER'">ユーザー</span>
+                            <span th:case="*">不明なロール</span>
+                        </span>
+                    </div>
+                </td>
+                <td>
+                    <a th:href="@{/admin/users/details/{id}(id=${user.id})}">ユーザー詳細</a>
+                    <a th:href="@{/admin/users/edit/{id}(id=${user.id})}">編集</a>
+                    <a th:href="@{/admin/users/delete/{id}(id=${user.id})}">削除</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div>
+        <h2><a th:href="@{/admin/users}">トップページへ</a></h2>
+    </div>
+</body>
+</html>

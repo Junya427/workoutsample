@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+    th:replace="~{base :: layout(~{::title},~{::body/content()})}">
+<head>
+    <meta charset="UTF-8">
+    <title>セッション検索</title>
+</head>
+<body>
+    <h1>セッション検索</h1>
+
+    <!-- 検索フォーム -->
+    <form action="/user/sessions/search" method="get">
+        <!-- 日付で検索 -->
+        <label for="date">日付で検索:</label>
+        <input type="date" id="date" name="date">
+        <br>
+
+        <!-- 部位で検索 -->
+        <label for="bodyPart">部位で検索:</label>
+        <select id="bodyPart" name="bodyPartId">
+            <option value="">-- 部位選択 --</option>
+            <!-- 部位を動的に追加 -->
+            <option th:each="bodyPart : ${bodyParts}" th:value="${bodyPart.id}" th:text="${bodyPart.name}"></option>
+        </select>
+        <br>
+
+        <button type="submit">検索</button>
+    </form>
+
+    <!-- 検索結果の表示 -->
+    <div>
+        <h2>検索結果</h2>
+        <p th:if="${message}" th:text="${message}"></p>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>日付</th>
+                    <th>部位</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+        <tbody>
+            <tr th:each="trainingSession : ${sessionDTOs}">
+                <td th:text="${trainingSession.id}">ID</td>
+                <td th:text="${trainingSession.date}">日付</td>
+                <td th:text="${trainingSession.bodyPart.name}">部位</td>
+                <td>
+                    <a th:href="@{/user/sessions/details/{id}(id=${trainingSession.id})}">セッション詳細</a>
+                    <a th:href="@{/user/sessions/edit/{id}(id=${trainingSession.id})}">編集</a>
+                    <a th:href="@{/user/sessions/delete/{id}(id=${trainingSession.id})}">削除</a>
+                </td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+    <div>
+        <h2><a th:href="@{/user/sessions}">トップページへ</a></h2>
+    </div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+    th:replace="~{base :: layout(~{::title},~{::body/content()})}">
+<head>
+    <meta charset="UTF-8">
+    <title>ユーザー検索結果</title>
+</head>
+<body>
+    <h1>検索結果</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>ユーザー名</th>
+                <th>権限</th>
+                <th>有効状態</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="user : ${users}">
+                <td th:text="${user.id}"></td>
+                <td th:text="${user.username}"></td>
+                <td>
+                    <span th:each="authority : ${user.authorities}" th:text="${authority.authority}"></span>
+                </td>
+                <td th:text="${user.enabled} ? '有効' : '無効'"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a th:href="@{/admin/users/search}">戻る</a>
+</body>
+</html>

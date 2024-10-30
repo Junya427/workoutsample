@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+    th:replace="~{base :: layout(~{::title},~{::body/content()})}">
+<head>
+    <meta charset="UTF-8">
+    <title>ユーザー検索</title>
+</head>
+<body>
+    <h1>ユーザー検索</h1>
+
+    <!-- 検索フォーム -->
+    <form action="/admin/users/search" method="get">
+        <!-- ユーザーネームで検索 -->
+        <label for="username">ユーザーネームで検索:</label>
+        <input type="text" id="username" name="username">
+        <br>
+
+        <!-- 権限で検索 -->
+        <label for="authority">権限で検索:</label>
+        <select id="authority" name="authorityId">
+            <option value="">-- 権限を選択 --</option>
+            <!-- 権限を動的に追加 -->
+            <option th:each="authority : ${authorities}" th:value="${authority.id}" th:text="${authority.authority}"></option>
+        </select>
+        <br>
+
+        <button type="submit">検索</button>
+    </form>
+
+    <!-- 検索結果の表示 -->
+    <div>
+        <h2>検索結果</h2>
+        <!-- 検索結果が存在する場合のみテーブルを表示 -->
+        <table th:if="${#lists.size(users) > 0}">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>ユーザーネーム</th>
+                    <th>権限</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="user : ${users}">
+                    <td th:text="${user.id}">ID</td>
+                    <td th:text="${user.username}">ユーザーネーム</td>
+                    <td th:text="${user.authorities[0].authority}">権限</td> <!-- 複数の権限がある場合、最初の権限を表示 -->
+                    <td>
+                        <a th:href="@{/admin/users/details/{id}(id=${user.id})}">詳細</a>
+                        <a th:href="@{/admin/users/edit/{id}(id=${user.id})}">編集</a>
+                        <a th:href="@{/admin/users/delete/{id}(id=${user.id})}">削除</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- 検索結果が空の場合のメッセージ -->
+        <p th:if="${#lists.size(users) == 0}">検索結果がありません。</p>
+    </div>
+
+    <div>
+        <h2><a th:href="@{/admin/users}">トップページへ</a></h2>
+    </div>
+</body>
+</html>

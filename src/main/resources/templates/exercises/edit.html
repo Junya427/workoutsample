@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org"
+    th:replace="~{base :: layout(~{::title},~{::body/content()})}">
+<head>
+    <meta charset="UTF-8">
+    <title>エクササイズの更新</title>
+</head>
+<body>
+    <h1>エクササイズの更新</h1>
+    <form th:action="@{/user/exercises/edit/{id}(id=${exercise.id})}" th:object="${exercise}" th:method="post">
+        <input type="hidden" th:field="*{id}">
+        <input type="hidden" th:field="*{session}">
+        <!--type="hidden"にすれば表示されない（ユーザーに変更されない）でidをpostできる-->
+        <label>エクササイズ名</label>
+        <input type="text" th:field="*{name}" th:errorclass="invalid"><br>
+        <div class="red" th:errors="*{name}"></div>
+
+        <label>重量</label>
+        <input type="number" th:field="*{weight}" th:errorclass="invalid"><br>
+        <div class="red" th:errors="*{weight}"></div>
+
+        <label>挙上回数</label>
+        <input type="number" th:field="*{reps}" th:errorclass="invalid"><br>
+        <div class="red" th:errors="*{reps}"></div>
+
+        <label>セット数</label>
+        <input type="number" th:field="*{sets}" th:errorclass="invalid"><br>
+        <div class="red" th:errors="*{sets}"></div>
+        <p><button type="submit">登録</button></p>
+    </form>
+</body>
+</html>

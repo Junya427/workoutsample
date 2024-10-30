@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org"
+    th:replace="~{base :: layout(~{::title},~{::body/content()})}">
+<head>
+    <meta charset="UTF-8">
+    <title>セッションリスト</title>
+</head>
+<body>
+    <h1>セッション一覧</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>日付</th>
+                <th>部位</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="trainingSession : ${sessions}">
+                <td th:text="${trainingSession.id}">ID</td>
+                <td th:text="${trainingSession.date}">日付</td>
+                <td th:text="${trainingSession.bodyPart.name}">部位</td>
+                <td>
+                    <a th:href="@{/user/sessions/details/{id}(id=${trainingSession.id})}">セッション詳細</a>
+                    <a th:href="@{/user/sessions/edit/{id}(id=${trainingSession.id})}">編集</a>
+                    <a th:href="@{/user/sessions/delete/{id}(id=${trainingSession.id})}">削除</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div>
+        <h2><a th:href="@{/user/sessions}">トップページへ</a></h2>
+    </div>
+</body>
+</html>

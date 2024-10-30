@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org"
+        th:fragment="layout(title,body)">
+<head>
+    <meta charset="UTF-8">
+    <title th:replace="${title}">Workout App</title>
+    <link th:href="@{/style.css}" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div id="body" th:replace="${body}"></div>
+    </div>
+</body>
+</html>

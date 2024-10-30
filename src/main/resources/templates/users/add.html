@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org"
+    th:replace="~{base :: layout(~{::title},~{::body/content()})}">
+<head>
+    <meta charset="UTF-8">
+    <title>ユーザーの追加</title>
+</head>
+<body>
+    <h1>ユーザーの追加</h1>
+    <form th:action="@{/admin/users/add}" th:object="${user}" th:method="post">
+        <label>ユーザー名</label>
+        <input type="text" th:field="*{username}" th:errorclass="invalid"><br>
+        <div class="red" th:errors="*{username}"></div>
+        <label>パスワード</label>
+        <input type="password" th:field="*{password}" th:errorclass="invalid"><br>
+        <div class="red" th:errors="*{password}"></div>
+        <label>アカウントを有効にする</label>
+        <input type="checkbox" th:field="*{enabled}" th:errorclass="invalid"><br>
+        <div class="red" th:errors="*{enabled}"></div>
+        <label>権限</label>
+        <select multiple="multiple" th:field="*{authorities}">
+            <option th:each="authority : ${authorities}"
+                    th:value="${authority.id}"
+                    th:text="${authority.authority}">
+            </option>
+        </select><br>
+        <div class="red" th:errors="*{authorities}"></div>
+        <p><button type="submit">登録</button></p>
+    </form>
+
+    <div>
+        <h2><a th:href="@{/admin/users}">トップページへ</a></h2>
+    </div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+    th:replace="~{base :: layout(~{::title},~{::body/content()})}">
+<head>
+    <meta charset="UTF-8">
+    <title>Session Result</title>
+</head>
+<body>
+    
+    <h1>セッション完了</h1>
+    
+    <!-- セッション情報を表示 -->
+    <div>
+        <h2>セッションID: <span th:text="${trainingSession.id}"></span></h2>
+        <p>日付: <span th:text="${trainingSession.date}"></span></p>
+        <p>部位: <span th:text="${trainingSession.bodyPart.name}"></span></p>
+    </div>
+    
+    <!-- totalVolume を表示 -->
+    <div>
+        <h2>トレーニングボリューム</h2>
+        <p>合計: <span th:text="${totalVolume}"></span></p>
+        <p th:text="${message}"></p>
+    </div>
+
+    <!-- 他のセッション詳細を表示 -->
+    <div>
+        <h2>このセッションのエクササイズ一覧</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>エクササイズ名</th>
+                    <th>重量</th>
+                    <th>挙上回数</th>
+                    <th>セット数</th>
+                    <th>トレーニングボリューム</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="exercise : ${trainingSession.exercises}">
+                    <td th:text="${exercise.id}">ID</td>
+                    <td th:text="${exercise.name}">種目名</td>
+                    <td>
+                        <div class="weight-container">
+                            <span th:text="${exercise.weight}"></span> kg
+                            <span th:if="${exercise.weightStatus != ''}" class="best-label" th:text="${exercise.weightStatus}"></span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="reps-container">
+                            <span th:text="${exercise.reps}"></span> 回
+                            <span th:if="${exercise.repStatus != ''}" class="best-label" th:text="${exercise.repStatus}"></span>
+                        </div>
+                    </td>
+                    <td th:text="${exercise.sets}">セット数</td>
+                    <td th:text="${exercise.volume}">トレーニングボリューム</td>
+                    <td>
+                        <a th:href="@{/user/exercises/edit/{id}(id=${exercise.id})}">編集</a>
+                        <a th:href="@{/user/exercises/delete/{id}(id=${exercise.id})}">削除</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <h2><a th:href="@{/user/sessions}">トップページへ</a></h2>
+    </div>
+</body>
+</html>

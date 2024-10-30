@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+    th:replace="~{base :: layout(~{::title},~{::body/content()})}">
+<head>
+    <meta charset="UTF-8">
+    <title>ユーザー登録リザルト画面</title>
+</head>
+<body>
+    
+    <h1>ユーザーの追加が完了しました</h1>
+    
+    <!-- セッション情報を表示 -->
+    
+    <h2>ユーザーネーム: <span th:text="${user.username}"></span></h2>
+    <p>アカウント: <span th:text="${user.enabled} ? '有効' : '無効'"></span></p>
+    
+    <div th:each="authority : ${user.authorities}">
+        <p>権限:
+            <span th:switch="${authority.authority}">
+                <span th:case="'ROLE_ADMIN'">管理者</span>
+                <span th:case="'ROLE_USER'">ユーザー</span>
+                <span th:case="*">不明なロール</span>
+            </span>
+        </p>
+    </div>
+
+    <div>
+        <h2><a th:href="@{/admin/users}">トップページへ</a></h2>
+    </div>
+</body>
+</html>
