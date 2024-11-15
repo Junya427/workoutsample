@@ -15,12 +15,12 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
+import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 import com.example.workoutsample.service.CustomUserDetailsService;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-
 
 @Configuration
 @EnableWebSecurity
@@ -46,20 +46,26 @@ public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Excepti
     http
         .userDetailsService(customUserDetailsService)
         .formLogin(login -> login
-            .successHandler(customAuthenticationSuccessHandler()) // ログイン成功時のハンドラー
-            .failureUrl("/login?error=true") // ログイン失敗時のリダイレクト先
-            .permitAll() // ログインページへのアクセスを許可
-        ).logout(logout -> logout
-            .logoutUrl("/logout") // ログアウトURL
-            .logoutSuccessUrl("/logout-success") // ログアウト成功後のリダイレクト先
-            .invalidateHttpSession(true) // セッション無効化
-            .deleteCookies("JSESSIONID") // クッキー削除
-            .permitAll() // 誰でもアクセス可能にする
-        ).authorizeHttpRequests(authz -> authz
-            .requestMatchers("/login", "/logout-success", "/api/**").permitAll() // 認証不要のURLを許可
-            .requestMatchers("/user/**").hasRole("USER") // ユーザー向けURL
-            .requestMatchers("/admin/**").hasRole("ADMIN") // 管理者向けURL
-            .anyRequest().authenticated() // それ以外は認証が必要
+            .loginPage("/login")
+            .loginProcessingUrl("/perform_login")
+            .successHandler(customAuthenticationSuccessHandler())
+            .failureUrl("/login?error=true")
+            .permitAll()
+        )
+        .logout(logout -> logout
+            .logoutUrl("/logout")
+            .logoutRequestMatcher(new AntPathRequestMatcher("/logout", "GET"))
+            .logoutSuccessUrl("/logout-success")
+            .invalidateHttpSession(true)
+            .deleteCookies("JSESSIONID")
+            .permitAll()
+        )
+        .authorizeHttpRequests(authz -> authz
+            .requestMatchers("/style.css", "/js/**", "/images/**", "/webjars/**").permitAll()
+            .requestMatchers("/login", "/logout-success", "/api/**").permitAll()
+            .requestMatchers("/user/**").hasRole("USER")
+            .requestMatchers("/admin/**").hasRole("ADMIN")
+            .anyRequest().authenticated()
         );
     return http.build();
 }
@@ -83,8 +89,14 @@ public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Excepti
                 // ログでリダイレクトURLを確認
                 logger.info("Redirecting to: {}", redirectUrl);
     
+                // デフォルトのリダイレクト先を設定
+                if (redirectUrl == null) {
+                    redirectUrl = "/default";
+                }
+    
                 response.sendRedirect(redirectUrl);
             }
         };
     }
+    
 }

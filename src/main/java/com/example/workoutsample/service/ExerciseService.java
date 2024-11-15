@@ -10,7 +10,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.example.workoutsample.dto.ExerciseDTO;
+import com.example.workoutsample.dto.SessionDTO;
 import com.example.workoutsample.mapper.ExerciseMapper;
+import com.example.workoutsample.mapper.SessionMapper;
 import com.example.workoutsample.model.Exercise;
 import com.example.workoutsample.model.Session;
 import com.example.workoutsample.model.User;
@@ -27,6 +29,9 @@ public class ExerciseService {
 
     @Autowired
     private ExerciseMapper exerciseMapper;
+
+    @Autowired
+    private SessionMapper sessionMapper;
 
     public List<Exercise> findAllExercises() {
         List<Exercise> exercises = exerciseRepository.findAll();
@@ -46,7 +51,8 @@ public class ExerciseService {
         return savedExercise;
     }
 
-    public Exercise saveExercise(ExerciseDTO exerciseDTO, String username, Session session) {
+    public Exercise saveExercise(ExerciseDTO exerciseDTO, String username, SessionDTO sessionDTO) {
+        Session session = sessionMapper.toEntity(sessionDTO);
         Exercise exercise = exerciseMapper.toEntity(exerciseDTO, session);
         Exercise savedExercise = exerciseRepository.save(exercise);
         operationLogService.logOperation(username, "エクササイズ(id=" + exercise.getId() + ")を追加しました");
@@ -76,14 +82,28 @@ public class ExerciseService {
         }
     }
 
-    public void deleteExerciseBySession(Session session, String username) {
-        List<Exercise> exercises = session.getExercises();
-        for (Exercise exercise : exercises) {
-            exercise.setDelete(true);
-            exerciseRepository.save(exercise);
-            operationLogService.logOperation(username, "エクササイズ(id= " + exercise.getId() + ")を削除しました");
+    public void deleteExerciseBySession(SessionDTO sessionDTO, String username) {
+        // セッションDTOからエクササイズのリストを取得
+        List<ExerciseDTO> exerciseDTOs = sessionDTO.getExercises();
+    
+        if (exerciseDTOs != null) {
+            for (ExerciseDTO exerciseDTO : exerciseDTOs) {
+                // 削除フラグを設定
+                exerciseDTO.setDeleted(true);
+    
+                // DTOからエンティティに変換する際に、関連するセッションエンティティを渡す必要がある
+                Session session = sessionMapper.toEntity(sessionDTO);
+                Exercise exercise = exerciseMapper.toEntity(exerciseDTO, session);
+    
+                // エクササイズを保存
+                exerciseRepository.save(exercise);
+    
+                // 操作ログに記録
+                operationLogService.logOperation(username, "エクササイズ(id= " + exercise.getId() + ")を削除しました");
+            }
         }
     }
+    
 
     public List<Exercise> findByUserAndName(User loginUser, String name) {
         return exerciseRepository.findByUserAndNameContainingIgnoreCase(loginUser, name);

@@ -1,59 +1,518 @@
-2024-10-27T19:27:02.116+09:00  INFO 28498 --- [main] c.e.w.WorkoutsampleApplication           : Starting WorkoutsampleApplication using Java 21.0.2 with PID 28498 (/Users/junya/webApp/workoutsample/build/classes/java/main started by junya in /Users/junya/webApp/workoutsample)
-2024-10-27T19:27:02.163+09:00  INFO 28498 --- [main] c.e.w.WorkoutsampleApplication           : No active profile set, falling back to 1 default profile: "default"
-2024-10-27T19:27:05.098+09:00  INFO 28498 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-27T19:27:05.271+09:00  INFO 28498 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 137 ms. Found 6 JPA repository interfaces.
-2024-10-27T19:27:06.783+09:00  INFO 28498 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-10-27T19:27:06.831+09:00  INFO 28498 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-10-27T19:27:06.832+09:00  INFO 28498 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
-2024-10-27T19:27:07.062+09:00  INFO 28498 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-10-27T19:27:07.063+09:00  INFO 28498 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4697 ms
-2024-10-27T19:27:07.647+09:00  INFO 28498 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-27T19:27:07.848+09:00  INFO 28498 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-10-27T19:27:08.122+09:00  INFO 28498 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-10-27T19:27:09.310+09:00  INFO 28498 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-10-27T19:27:09.420+09:00  INFO 28498 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-10-27T19:27:10.059+09:00  INFO 28498 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5d717f19
-2024-10-27T19:27:10.062+09:00  INFO 28498 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-10-27T19:27:12.805+09:00  INFO 28498 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-10-27T19:27:13.435+09:00  INFO 28498 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-27T19:27:14.792+09:00  INFO 28498 --- [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
-2024-10-27T19:27:15.037+09:00  INFO 28498 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2024-10-27T19:27:16.233+09:00  INFO 28498 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2024-10-27T19:27:16.258+09:00  INFO 28498 --- [main] c.e.w.WorkoutsampleApplication           : Started WorkoutsampleApplication in 15.453 seconds (process running for 17.297)
-2024-10-27T19:27:20.545+09:00  INFO 28498 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-10-27T19:27:20.548+09:00  INFO 28498 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-10-27T19:27:20.552+09:00  INFO 28498 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2024-10-27T19:27:41.995+09:00  INFO 28498 --- [http-nio-8080-exec-5] c.e.workoutsample.config.SecurityConfig  : Redirecting to: /user/sessions
-2024-10-27T19:28:23.647+09:00  INFO 28498 --- [http-nio-8080-exec-1] c.e.workoutsample.config.SecurityConfig  : Redirecting to: /user/sessions
-2024-10-27T19:31:37.746+09:00  INFO 28498 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-27T19:31:37.774+09:00  INFO 28498 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-10-27T19:31:37.791+09:00  INFO 28498 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-10-27T19:31:48.111+09:00  INFO 28729 --- [main] c.e.w.WorkoutsampleApplication           : Starting WorkoutsampleApplication using Java 21.0.2 with PID 28729 (/Users/junya/webApp/workoutsample/build/classes/java/main started by junya in /Users/junya/webApp/workoutsample)
-2024-10-27T19:31:48.117+09:00  INFO 28729 --- [main] c.e.w.WorkoutsampleApplication           : No active profile set, falling back to 1 default profile: "default"
-2024-10-27T19:31:50.550+09:00  INFO 28729 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-27T19:31:50.706+09:00  INFO 28729 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 128 ms. Found 6 JPA repository interfaces.
-2024-10-27T19:31:52.007+09:00  INFO 28729 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-10-27T19:31:52.052+09:00  INFO 28729 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-10-27T19:31:52.053+09:00  INFO 28729 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
-2024-10-27T19:31:52.184+09:00  INFO 28729 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-10-27T19:31:52.185+09:00  INFO 28729 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3865 ms
-2024-10-27T19:31:52.551+09:00  INFO 28729 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-27T19:31:52.714+09:00  INFO 28729 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-10-27T19:31:52.790+09:00  INFO 28729 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-10-27T19:31:53.457+09:00  INFO 28729 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-10-27T19:31:53.519+09:00  INFO 28729 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-10-27T19:31:53.869+09:00  INFO 28729 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@56835f2f
-2024-10-27T19:31:53.872+09:00  INFO 28729 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-10-27T19:31:56.272+09:00  INFO 28729 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-10-27T19:31:56.436+09:00  INFO 28729 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-27T19:31:57.487+09:00  INFO 28729 --- [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
-2024-10-27T19:31:57.676+09:00  INFO 28729 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2024-10-27T19:31:59.095+09:00  INFO 28729 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2024-10-27T19:31:59.120+09:00  INFO 28729 --- [main] c.e.w.WorkoutsampleApplication           : Started WorkoutsampleApplication in 12.415 seconds (process running for 13.856)
-2024-10-27T19:32:03.197+09:00  INFO 28729 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-10-27T19:32:03.199+09:00  INFO 28729 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-10-27T19:32:03.202+09:00  INFO 28729 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
-2024-10-27T19:32:11.887+09:00  INFO 28729 --- [http-nio-8080-exec-3] c.e.workoutsample.config.SecurityConfig  : Redirecting to: /admin/users
-2024-10-27T19:34:32.051+09:00  INFO 28729 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-27T19:34:32.059+09:00  INFO 28729 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-10-27T19:34:32.064+09:00  INFO 28729 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-11-15T01:10:48.933+09:00  WARN 75766 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h42m15s329ms).
+2024-11-15T01:11:18.467+09:00  WARN 75766 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Retrograde clock change detected (housekeeper delta=29s534ms), soft-evicting connections from pool.
+2024-11-15T01:41:40.722+09:00  WARN 75766 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=30m22s255ms).
+2024-11-15T02:00:21.394+09:00  WARN 75766 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=18m10s670ms).
+2024-11-15T02:16:39.246+09:00  WARN 75766 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m47s848ms).
+2024-11-15T02:52:51.891+09:00  WARN 75766 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=36m12s645ms).
+2024-11-15T04:53:45.851+09:00  WARN 75766 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2h23s957ms).
+2024-11-15T05:23:06.444+09:00  WARN 75766 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=28m50s581ms).
+2024-11-15T05:41:23.125+09:00  WARN 75766 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=18m16s681ms).
+2024-11-15T05:58:11.092+09:00  WARN 75766 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m47s964ms).
+2024-11-15T07:53:30.021+09:00  WARN 75766 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h55m18s929ms).
+2024-11-15T09:57:21.503+09:00  WARN 75766 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2h2m51s262ms).
+2024-11-15T09:59:00.024+09:00  INFO 75766 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-15T09:59:00.240+09:00  INFO 75766 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-11-15T09:59:00.248+09:00  INFO 75766 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-11-15T10:02:38.283+09:00  INFO 77530 --- [main] c.e.w.WorkoutsampleApplication           : Starting WorkoutsampleApplication using Java 21.0.2 with PID 77530 (/Users/junya/webApp/workoutsample/build/classes/java/main started by junya in /Users/junya/webApp/workoutsample)
+2024-11-15T10:02:38.393+09:00  INFO 77530 --- [main] c.e.w.WorkoutsampleApplication           : No active profile set, falling back to 1 default profile: "default"
+2024-11-15T10:02:41.566+09:00  INFO 77530 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-15T10:02:41.975+09:00  INFO 77530 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 374 ms. Found 6 JPA repository interfaces.
+2024-11-15T10:02:44.620+09:00  INFO 77530 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-11-15T10:02:44.668+09:00  INFO 77530 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-15T10:02:44.668+09:00  INFO 77530 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-11-15T10:02:44.815+09:00  INFO 77530 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-15T10:02:44.816+09:00  INFO 77530 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6289 ms
+2024-11-15T10:02:45.232+09:00  INFO 77530 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-15T10:02:45.388+09:00  INFO 77530 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-11-15T10:02:45.486+09:00  INFO 77530 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-11-15T10:02:46.596+09:00  INFO 77530 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-15T10:02:46.663+09:00  INFO 77530 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-11-15T10:02:47.104+09:00  INFO 77530 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@18715bb
+2024-11-15T10:02:47.107+09:00  INFO 77530 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-11-15T10:02:49.952+09:00  INFO 77530 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-15T10:02:50.165+09:00  INFO 77530 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-15T10:02:52.111+09:00  INFO 77530 --- [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2024-11-15T10:02:52.416+09:00  INFO 77530 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-11-15T10:02:52.604+09:00 DEBUG 77530 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 35 mappings in 'requestMappingHandlerMapping'
+2024-11-15T10:02:52.938+09:00 DEBUG 77530 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-11-15T10:02:54.096+09:00 DEBUG 77530 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-11-15T10:02:54.199+09:00 DEBUG 77530 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-11-15T10:02:55.188+09:00  INFO 77530 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-11-15T10:02:55.282+09:00  INFO 77530 --- [main] c.e.w.WorkoutsampleApplication           : Started WorkoutsampleApplication in 18.181 seconds (process running for 19.641)
+2024-11-15T10:03:06.541+09:00  INFO 77530 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-15T10:03:06.543+09:00  INFO 77530 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-11-15T10:03:06.545+09:00 DEBUG 77530 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2024-11-15T10:03:06.546+09:00 DEBUG 77530 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2024-11-15T10:03:06.547+09:00 DEBUG 77530 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2024-11-15T10:03:06.551+09:00 DEBUG 77530 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@31c29db1
+2024-11-15T10:03:06.553+09:00 DEBUG 77530 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@3c98eaa9
+2024-11-15T10:03:06.558+09:00 DEBUG 77530 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-11-15T10:03:06.559+09:00  INFO 77530 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 14 ms
+2024-11-15T10:03:06.947+09:00 DEBUG 77530 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/login", parameters={}
+2024-11-15T10:03:06.951+09:00 DEBUG 77530 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.workoutsample.controller.LoginController#login()
+2024-11-15T10:03:07.002+09:00 DEBUG 77530 --- [http-nio-8080-exec-2] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2024-11-15T10:03:08.061+09:00 DEBUG 77530 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:03:08.110+09:00 DEBUG 77530 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/style.css", parameters={}
+2024-11-15T10:03:08.114+09:00 DEBUG 77530 --- [http-nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2024-11-15T10:03:08.131+09:00 DEBUG 77530 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:03:08.372+09:00 DEBUG 77530 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/login", parameters={}
+2024-11-15T10:03:08.373+09:00 DEBUG 77530 --- [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.workoutsample.controller.LoginController#login()
+2024-11-15T10:03:08.375+09:00 DEBUG 77530 --- [http-nio-8080-exec-5] o.s.w.s.v.ContentNegotiatingViewResolver : Selected '*/*' given [*/*]
+2024-11-15T10:03:08.411+09:00 DEBUG 77530 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:03:13.823+09:00  INFO 77530 --- [http-nio-8080-exec-6] c.e.workoutsample.config.SecurityConfig  : Redirecting to: /user/sessions
+2024-11-15T10:03:13.841+09:00 DEBUG 77530 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/user/sessions", parameters={}
+2024-11-15T10:03:13.842+09:00 DEBUG 77530 --- [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.workoutsample.controller.user.SessionController#selectMenu()
+2024-11-15T10:03:13.847+09:00 DEBUG 77530 --- [http-nio-8080-exec-7] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2024-11-15T10:03:13.865+09:00 DEBUG 77530 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:03:13.889+09:00 DEBUG 77530 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/style.css", parameters={}
+2024-11-15T10:03:13.891+09:00 DEBUG 77530 --- [http-nio-8080-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2024-11-15T10:03:13.895+09:00 DEBUG 77530 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:03:16.364+09:00 DEBUG 77530 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/user/sessions/showSessions", parameters={}
+2024-11-15T10:03:16.366+09:00 DEBUG 77530 --- [http-nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.workoutsample.controller.user.SessionController#showSessions()
+2024-11-15T10:03:16.369+09:00 DEBUG 77530 --- [http-nio-8080-exec-9] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2024-11-15T10:03:16.380+09:00 DEBUG 77530 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:03:16.406+09:00 DEBUG 77530 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/style.css", parameters={}
+2024-11-15T10:03:16.407+09:00 DEBUG 77530 --- [http-nio-8080-exec-10] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2024-11-15T10:03:16.409+09:00 DEBUG 77530 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:03:17.185+09:00 DEBUG 77530 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/user/sessions/showAll", parameters={}
+2024-11-15T10:03:17.186+09:00 DEBUG 77530 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.workoutsample.controller.user.SessionController#showAll(Model)
+2024-11-15T10:03:17.354+09:00 DEBUG 77530 --- [http-nio-8080-exec-1] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2024-11-15T10:03:17.397+09:00 DEBUG 77530 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:03:17.419+09:00 DEBUG 77530 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/style.css", parameters={}
+2024-11-15T10:03:17.420+09:00 DEBUG 77530 --- [http-nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2024-11-15T10:03:17.423+09:00 DEBUG 77530 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:03:24.350+09:00 DEBUG 77530 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/user/sessions", parameters={}
+2024-11-15T10:03:24.351+09:00 DEBUG 77530 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.workoutsample.controller.user.SessionController#selectMenu()
+2024-11-15T10:03:24.353+09:00 DEBUG 77530 --- [http-nio-8080-exec-3] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2024-11-15T10:03:24.372+09:00 DEBUG 77530 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:03:24.394+09:00 DEBUG 77530 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/style.css", parameters={}
+2024-11-15T10:03:24.395+09:00 DEBUG 77530 --- [http-nio-8080-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2024-11-15T10:03:24.397+09:00 DEBUG 77530 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:03:25.520+09:00 DEBUG 77530 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/user/sessions/add", parameters={}
+2024-11-15T10:03:25.520+09:00 DEBUG 77530 --- [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.workoutsample.controller.user.SessionController#addSessionForm(Model)
+2024-11-15T10:03:25.571+09:00 DEBUG 77530 --- [http-nio-8080-exec-5] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2024-11-15T10:03:25.630+09:00 DEBUG 77530 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:03:25.655+09:00 DEBUG 77530 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/style.css", parameters={}
+2024-11-15T10:03:25.657+09:00 DEBUG 77530 --- [http-nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2024-11-15T10:03:25.659+09:00 DEBUG 77530 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:03:30.965+09:00 DEBUG 77530 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : POST "/user/sessions/add", parameters={masked}
+2024-11-15T10:03:30.967+09:00 DEBUG 77530 --- [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.workoutsample.controller.user.SessionController#addSession(SessionDTO, BindingResult, Model)
+2024-11-15T10:03:31.130+09:00 DEBUG 77530 --- [http-nio-8080-exec-7] o.s.web.servlet.view.RedirectView        : View name [redirect:], model {}
+2024-11-15T10:03:31.131+09:00 DEBUG 77530 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 302 FOUND
+2024-11-15T10:03:31.147+09:00 DEBUG 77530 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/user/exercises/42/add", parameters={}
+2024-11-15T10:03:31.148+09:00 DEBUG 77530 --- [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.workoutsample.controller.user.ExerciseController#addExerciseForm(Long, Model)
+2024-11-15T10:03:31.155+09:00 DEBUG 77530 --- [http-nio-8080-exec-8] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2024-11-15T10:03:31.180+09:00 DEBUG 77530 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:03:31.196+09:00 DEBUG 77530 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/style.css", parameters={}
+2024-11-15T10:03:31.197+09:00 DEBUG 77530 --- [http-nio-8080-exec-9] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2024-11-15T10:03:31.201+09:00 DEBUG 77530 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:03:43.728+09:00 DEBUG 77530 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : POST "/user/exercises/42/add", parameters={masked}
+2024-11-15T10:03:43.730+09:00 DEBUG 77530 --- [http-nio-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.workoutsample.controller.user.ExerciseController#addExercise(Long, ExerciseDTO, BindingResult, Model)
+2024-11-15T10:03:43.908+09:00 DEBUG 77530 --- [http-nio-8080-exec-10] o.s.web.servlet.view.RedirectView        : View name [redirect:], model {}
+2024-11-15T10:03:43.910+09:00 DEBUG 77530 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 302 FOUND
+2024-11-15T10:03:43.927+09:00 DEBUG 77530 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/user/exercises/42/add", parameters={}
+2024-11-15T10:03:43.928+09:00 DEBUG 77530 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.workoutsample.controller.user.ExerciseController#addExerciseForm(Long, Model)
+2024-11-15T10:03:43.929+09:00 DEBUG 77530 --- [http-nio-8080-exec-1] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2024-11-15T10:03:43.944+09:00 DEBUG 77530 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:03:43.965+09:00 DEBUG 77530 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/style.css", parameters={}
+2024-11-15T10:03:44.013+09:00 DEBUG 77530 --- [http-nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2024-11-15T10:03:44.019+09:00 DEBUG 77530 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:03:55.727+09:00 DEBUG 77530 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : POST "/user/exercises/42/add", parameters={masked}
+2024-11-15T10:03:55.729+09:00 DEBUG 77530 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.workoutsample.controller.user.ExerciseController#addExercise(Long, ExerciseDTO, BindingResult, Model)
+2024-11-15T10:03:55.794+09:00 DEBUG 77530 --- [http-nio-8080-exec-3] o.s.web.servlet.view.RedirectView        : View name [redirect:], model {}
+2024-11-15T10:03:55.796+09:00 DEBUG 77530 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 302 FOUND
+2024-11-15T10:03:55.809+09:00 DEBUG 77530 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/user/exercises/42/add", parameters={}
+2024-11-15T10:03:55.810+09:00 DEBUG 77530 --- [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.workoutsample.controller.user.ExerciseController#addExerciseForm(Long, Model)
+2024-11-15T10:03:55.813+09:00 DEBUG 77530 --- [http-nio-8080-exec-4] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2024-11-15T10:03:55.826+09:00 DEBUG 77530 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:03:55.842+09:00 DEBUG 77530 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/style.css", parameters={}
+2024-11-15T10:03:55.844+09:00 DEBUG 77530 --- [http-nio-8080-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2024-11-15T10:03:55.852+09:00 DEBUG 77530 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:03:57.108+09:00 DEBUG 77530 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : POST "/user/exercises/42/add", parameters={masked}
+2024-11-15T10:03:57.110+09:00 DEBUG 77530 --- [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.workoutsample.controller.user.ExerciseController#addExercise(Long, ExerciseDTO, BindingResult, Model)
+2024-11-15T10:03:57.121+09:00 DEBUG 77530 --- [http-nio-8080-exec-6] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2024-11-15T10:03:57.137+09:00 DEBUG 77530 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:03:57.159+09:00 DEBUG 77530 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/style.css", parameters={}
+2024-11-15T10:03:57.160+09:00 DEBUG 77530 --- [http-nio-8080-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2024-11-15T10:03:57.162+09:00 DEBUG 77530 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:03:58.475+09:00 DEBUG 77530 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/user/sessions/42/result", parameters={}
+2024-11-15T10:03:58.476+09:00 DEBUG 77530 --- [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.workoutsample.controller.user.SessionController#result(Long, Model)
+2024-11-15T10:03:58.538+09:00 DEBUG 77530 --- [http-nio-8080-exec-8] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2024-11-15T10:03:58.570+09:00 DEBUG 77530 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:03:58.585+09:00 DEBUG 77530 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/style.css", parameters={}
+2024-11-15T10:03:58.590+09:00 DEBUG 77530 --- [http-nio-8080-exec-9] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2024-11-15T10:03:58.593+09:00 DEBUG 77530 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:04:00.746+09:00 DEBUG 77530 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/user/sessions", parameters={}
+2024-11-15T10:04:00.747+09:00 DEBUG 77530 --- [http-nio-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.workoutsample.controller.user.SessionController#selectMenu()
+2024-11-15T10:04:00.748+09:00 DEBUG 77530 --- [http-nio-8080-exec-10] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2024-11-15T10:04:00.760+09:00 DEBUG 77530 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:04:00.785+09:00 DEBUG 77530 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/style.css", parameters={}
+2024-11-15T10:04:00.787+09:00 DEBUG 77530 --- [http-nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2024-11-15T10:04:00.789+09:00 DEBUG 77530 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:04:02.201+09:00 DEBUG 77530 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/user/sessions/showSessions", parameters={}
+2024-11-15T10:04:02.202+09:00 DEBUG 77530 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.workoutsample.controller.user.SessionController#showSessions()
+2024-11-15T10:04:02.204+09:00 DEBUG 77530 --- [http-nio-8080-exec-2] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2024-11-15T10:04:02.212+09:00 DEBUG 77530 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:04:02.230+09:00 DEBUG 77530 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/style.css", parameters={}
+2024-11-15T10:04:02.231+09:00 DEBUG 77530 --- [http-nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2024-11-15T10:04:02.234+09:00 DEBUG 77530 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:04:03.523+09:00 DEBUG 77530 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/user/sessions/search", parameters={}
+2024-11-15T10:04:03.526+09:00 DEBUG 77530 --- [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.workoutsample.controller.user.SessionController#searchSessions(LocalDate, Long, Model)
+2024-11-15T10:04:03.544+09:00 DEBUG 77530 --- [http-nio-8080-exec-4] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2024-11-15T10:04:03.566+09:00 DEBUG 77530 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:04:03.586+09:00 DEBUG 77530 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/style.css", parameters={}
+2024-11-15T10:04:03.587+09:00 DEBUG 77530 --- [http-nio-8080-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2024-11-15T10:04:03.593+09:00 DEBUG 77530 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:04:07.338+09:00 DEBUG 77530 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/user/sessions/search?date=2024-11-02&bodyPartId=", parameters={masked}
+2024-11-15T10:04:07.338+09:00 DEBUG 77530 --- [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.workoutsample.controller.user.SessionController#searchSessions(LocalDate, Long, Model)
+2024-11-15T10:04:07.361+09:00 DEBUG 77530 --- [http-nio-8080-exec-6] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2024-11-15T10:04:07.379+09:00 DEBUG 77530 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:04:07.402+09:00 DEBUG 77530 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/style.css", parameters={}
+2024-11-15T10:04:07.404+09:00 DEBUG 77530 --- [http-nio-8080-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2024-11-15T10:04:07.405+09:00 DEBUG 77530 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:04:10.053+09:00 DEBUG 77530 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/user/sessions/search?date=&bodyPartId=2", parameters={masked}
+2024-11-15T10:04:10.054+09:00 DEBUG 77530 --- [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.workoutsample.controller.user.SessionController#searchSessions(LocalDate, Long, Model)
+2024-11-15T10:04:10.084+09:00 DEBUG 77530 --- [http-nio-8080-exec-8] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2024-11-15T10:04:10.103+09:00 DEBUG 77530 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:04:10.117+09:00 DEBUG 77530 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/style.css", parameters={}
+2024-11-15T10:04:10.118+09:00 DEBUG 77530 --- [http-nio-8080-exec-9] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2024-11-15T10:04:10.125+09:00 DEBUG 77530 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:04:12.061+09:00 DEBUG 77530 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/user/sessions", parameters={}
+2024-11-15T10:04:12.063+09:00 DEBUG 77530 --- [http-nio-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.workoutsample.controller.user.SessionController#selectMenu()
+2024-11-15T10:04:12.066+09:00 DEBUG 77530 --- [http-nio-8080-exec-10] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2024-11-15T10:04:12.073+09:00 DEBUG 77530 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:04:12.079+09:00 DEBUG 77530 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/style.css", parameters={}
+2024-11-15T10:04:12.091+09:00 DEBUG 77530 --- [http-nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2024-11-15T10:04:12.095+09:00 DEBUG 77530 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:04:16.323+09:00 DEBUG 77530 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/user/exercises/showExercises", parameters={}
+2024-11-15T10:04:16.324+09:00 DEBUG 77530 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.workoutsample.controller.user.ExerciseController#showExercises()
+2024-11-15T10:04:16.327+09:00 DEBUG 77530 --- [http-nio-8080-exec-2] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2024-11-15T10:04:16.333+09:00 DEBUG 77530 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:04:16.353+09:00 DEBUG 77530 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/style.css", parameters={}
+2024-11-15T10:04:16.354+09:00 DEBUG 77530 --- [http-nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2024-11-15T10:04:16.358+09:00 DEBUG 77530 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:04:17.230+09:00 DEBUG 77530 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/user/exercises/search", parameters={}
+2024-11-15T10:04:17.231+09:00 DEBUG 77530 --- [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.workoutsample.controller.user.ExerciseController#search(String, Model)
+2024-11-15T10:04:17.246+09:00 DEBUG 77530 --- [http-nio-8080-exec-4] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2024-11-15T10:04:17.254+09:00 DEBUG 77530 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:04:17.268+09:00 DEBUG 77530 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/style.css", parameters={}
+2024-11-15T10:04:17.273+09:00 DEBUG 77530 --- [http-nio-8080-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2024-11-15T10:04:17.275+09:00 DEBUG 77530 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:04:23.310+09:00 DEBUG 77530 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/user/exercises/search?name=%E3%83%AA%E3%83%95%E3%83%88", parameters={masked}
+2024-11-15T10:04:23.312+09:00 DEBUG 77530 --- [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.workoutsample.controller.user.ExerciseController#search(String, Model)
+2024-11-15T10:04:23.360+09:00 DEBUG 77530 --- [http-nio-8080-exec-6] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2024-11-15T10:04:23.375+09:00 DEBUG 77530 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:04:23.388+09:00 DEBUG 77530 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/style.css", parameters={}
+2024-11-15T10:04:23.396+09:00 DEBUG 77530 --- [http-nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2024-11-15T10:04:23.398+09:00 DEBUG 77530 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:04:27.250+09:00 DEBUG 77530 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/user/sessions", parameters={}
+2024-11-15T10:04:27.251+09:00 DEBUG 77530 --- [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.workoutsample.controller.user.SessionController#selectMenu()
+2024-11-15T10:04:27.254+09:00 DEBUG 77530 --- [http-nio-8080-exec-7] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2024-11-15T10:04:27.262+09:00 DEBUG 77530 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:04:27.267+09:00 DEBUG 77530 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/style.css", parameters={}
+2024-11-15T10:04:27.270+09:00 DEBUG 77530 --- [http-nio-8080-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2024-11-15T10:04:27.278+09:00 DEBUG 77530 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:04:28.821+09:00 DEBUG 77530 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/logout-success", parameters={}
+2024-11-15T10:04:28.822+09:00 DEBUG 77530 --- [http-nio-8080-exec-10] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2024-11-15T10:04:28.823+09:00 DEBUG 77530 --- [http-nio-8080-exec-10] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2024-11-15T10:04:28.829+09:00 DEBUG 77530 --- [http-nio-8080-exec-10] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource logout-success.]
+2024-11-15T10:04:28.830+09:00 DEBUG 77530 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2024-11-15T10:04:28.868+09:00 DEBUG 77530 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/login", parameters={}
+2024-11-15T10:04:28.869+09:00 DEBUG 77530 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.workoutsample.controller.LoginController#login()
+2024-11-15T10:04:28.870+09:00 DEBUG 77530 --- [http-nio-8080-exec-2] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2024-11-15T10:04:28.879+09:00 DEBUG 77530 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:04:28.900+09:00 DEBUG 77530 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/style.css", parameters={}
+2024-11-15T10:04:28.901+09:00 DEBUG 77530 --- [http-nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2024-11-15T10:04:28.903+09:00 DEBUG 77530 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:04:36.154+09:00  INFO 77530 --- [http-nio-8080-exec-4] c.e.workoutsample.config.SecurityConfig  : Redirecting to: /admin/users
+2024-11-15T10:04:36.171+09:00 DEBUG 77530 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/admin/users", parameters={}
+2024-11-15T10:04:36.171+09:00 DEBUG 77530 --- [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.workoutsample.controller.admin.UserController#selectMenu()
+2024-11-15T10:04:36.173+09:00 DEBUG 77530 --- [http-nio-8080-exec-5] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2024-11-15T10:04:36.184+09:00 DEBUG 77530 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:04:36.206+09:00 DEBUG 77530 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/style.css", parameters={}
+2024-11-15T10:04:36.207+09:00 DEBUG 77530 --- [http-nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2024-11-15T10:04:36.210+09:00 DEBUG 77530 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:04:37.980+09:00 DEBUG 77530 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/admin/users/show", parameters={}
+2024-11-15T10:04:37.981+09:00 DEBUG 77530 --- [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.workoutsample.controller.admin.UserController#showUsersMenu()
+2024-11-15T10:04:37.984+09:00 DEBUG 77530 --- [http-nio-8080-exec-7] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2024-11-15T10:04:37.992+09:00 DEBUG 77530 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:04:38.005+09:00 DEBUG 77530 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/style.css", parameters={}
+2024-11-15T10:04:38.007+09:00 DEBUG 77530 --- [http-nio-8080-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2024-11-15T10:04:38.015+09:00 DEBUG 77530 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:04:39.684+09:00 DEBUG 77530 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/admin/users/showAll", parameters={}
+2024-11-15T10:04:39.684+09:00 DEBUG 77530 --- [http-nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.workoutsample.controller.admin.UserController#showAll(Model)
+2024-11-15T10:04:39.732+09:00 DEBUG 77530 --- [http-nio-8080-exec-9] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2024-11-15T10:04:39.764+09:00 DEBUG 77530 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:04:39.787+09:00 DEBUG 77530 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/style.css", parameters={}
+2024-11-15T10:04:39.789+09:00 DEBUG 77530 --- [http-nio-8080-exec-10] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2024-11-15T10:04:39.792+09:00 DEBUG 77530 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:04:42.273+09:00 DEBUG 77530 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/admin/users", parameters={}
+2024-11-15T10:04:42.274+09:00 DEBUG 77530 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.workoutsample.controller.admin.UserController#selectMenu()
+2024-11-15T10:04:42.275+09:00 DEBUG 77530 --- [http-nio-8080-exec-1] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2024-11-15T10:04:42.281+09:00 DEBUG 77530 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:04:42.299+09:00 DEBUG 77530 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/style.css", parameters={}
+2024-11-15T10:04:42.300+09:00 DEBUG 77530 --- [http-nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2024-11-15T10:04:42.301+09:00 DEBUG 77530 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:04:43.493+09:00 DEBUG 77530 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/admin/users/show", parameters={}
+2024-11-15T10:04:43.494+09:00 DEBUG 77530 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.workoutsample.controller.admin.UserController#showUsersMenu()
+2024-11-15T10:04:43.495+09:00 DEBUG 77530 --- [http-nio-8080-exec-3] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2024-11-15T10:04:43.505+09:00 DEBUG 77530 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:04:43.526+09:00 DEBUG 77530 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/style.css", parameters={}
+2024-11-15T10:04:43.527+09:00 DEBUG 77530 --- [http-nio-8080-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2024-11-15T10:04:43.530+09:00 DEBUG 77530 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:04:44.329+09:00 DEBUG 77530 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/admin/users/search", parameters={}
+2024-11-15T10:04:44.330+09:00 DEBUG 77530 --- [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.workoutsample.controller.admin.UserController#searchUsers(String, Long, Model)
+2024-11-15T10:04:44.365+09:00 DEBUG 77530 --- [http-nio-8080-exec-5] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2024-11-15T10:04:44.396+09:00 DEBUG 77530 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:04:44.407+09:00 DEBUG 77530 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/style.css", parameters={}
+2024-11-15T10:04:44.409+09:00 DEBUG 77530 --- [http-nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2024-11-15T10:04:44.414+09:00 DEBUG 77530 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:04:53.394+09:00 DEBUG 77530 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/admin/users/search?username=user&authorityId=", parameters={masked}
+2024-11-15T10:04:53.398+09:00 DEBUG 77530 --- [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.workoutsample.controller.admin.UserController#searchUsers(String, Long, Model)
+2024-11-15T10:04:53.570+09:00 DEBUG 77530 --- [http-nio-8080-exec-7] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2024-11-15T10:04:53.586+09:00 DEBUG 77530 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:04:53.606+09:00 DEBUG 77530 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/style.css", parameters={}
+2024-11-15T10:04:53.608+09:00 DEBUG 77530 --- [http-nio-8080-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2024-11-15T10:04:53.611+09:00 DEBUG 77530 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:05:00.645+09:00 DEBUG 77530 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/admin/users/search?username=&authorityId=1", parameters={masked}
+2024-11-15T10:05:00.646+09:00 DEBUG 77530 --- [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.workoutsample.controller.admin.UserController#searchUsers(String, Long, Model)
+2024-11-15T10:05:00.673+09:00 DEBUG 77530 --- [http-nio-8080-exec-8] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2024-11-15T10:05:00.693+09:00 DEBUG 77530 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:05:00.727+09:00 DEBUG 77530 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/style.css", parameters={}
+2024-11-15T10:05:00.728+09:00 DEBUG 77530 --- [http-nio-8080-exec-9] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2024-11-15T10:05:00.730+09:00 DEBUG 77530 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:05:04.837+09:00 DEBUG 77530 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/admin/users", parameters={}
+2024-11-15T10:05:04.838+09:00 DEBUG 77530 --- [http-nio-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.workoutsample.controller.admin.UserController#selectMenu()
+2024-11-15T10:05:04.840+09:00 DEBUG 77530 --- [http-nio-8080-exec-10] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2024-11-15T10:05:04.846+09:00 DEBUG 77530 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:05:04.869+09:00 DEBUG 77530 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/style.css", parameters={}
+2024-11-15T10:05:04.870+09:00 DEBUG 77530 --- [http-nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2024-11-15T10:05:04.874+09:00 DEBUG 77530 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:05:06.155+09:00 DEBUG 77530 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/admin/users/show", parameters={}
+2024-11-15T10:05:06.156+09:00 DEBUG 77530 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.workoutsample.controller.admin.UserController#showUsersMenu()
+2024-11-15T10:05:06.158+09:00 DEBUG 77530 --- [http-nio-8080-exec-2] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2024-11-15T10:05:06.164+09:00 DEBUG 77530 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:05:06.177+09:00 DEBUG 77530 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/style.css", parameters={}
+2024-11-15T10:05:06.179+09:00 DEBUG 77530 --- [http-nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2024-11-15T10:05:06.181+09:00 DEBUG 77530 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:05:06.957+09:00 DEBUG 77530 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/admin/users/showAll", parameters={}
+2024-11-15T10:05:06.958+09:00 DEBUG 77530 --- [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.workoutsample.controller.admin.UserController#showAll(Model)
+2024-11-15T10:05:06.982+09:00 DEBUG 77530 --- [http-nio-8080-exec-5] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2024-11-15T10:05:07.003+09:00 DEBUG 77530 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:05:07.020+09:00 DEBUG 77530 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/style.css", parameters={}
+2024-11-15T10:05:07.021+09:00 DEBUG 77530 --- [http-nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2024-11-15T10:05:07.022+09:00 DEBUG 77530 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:05:13.180+09:00 DEBUG 77530 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/admin/users", parameters={}
+2024-11-15T10:05:13.180+09:00 DEBUG 77530 --- [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.workoutsample.controller.admin.UserController#selectMenu()
+2024-11-15T10:05:13.181+09:00 DEBUG 77530 --- [http-nio-8080-exec-7] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2024-11-15T10:05:13.185+09:00 DEBUG 77530 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:05:13.191+09:00 DEBUG 77530 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/style.css", parameters={}
+2024-11-15T10:05:13.194+09:00 DEBUG 77530 --- [http-nio-8080-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2024-11-15T10:05:13.197+09:00 DEBUG 77530 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:05:14.828+09:00 DEBUG 77530 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/admin/users/show", parameters={}
+2024-11-15T10:05:14.829+09:00 DEBUG 77530 --- [http-nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.workoutsample.controller.admin.UserController#showUsersMenu()
+2024-11-15T10:05:14.830+09:00 DEBUG 77530 --- [http-nio-8080-exec-9] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2024-11-15T10:05:14.837+09:00 DEBUG 77530 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:05:14.846+09:00 DEBUG 77530 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/style.css", parameters={}
+2024-11-15T10:05:14.849+09:00 DEBUG 77530 --- [http-nio-8080-exec-10] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2024-11-15T10:05:14.852+09:00 DEBUG 77530 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:05:15.855+09:00 DEBUG 77530 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/admin/users/showAll", parameters={}
+2024-11-15T10:05:15.857+09:00 DEBUG 77530 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.workoutsample.controller.admin.UserController#showAll(Model)
+2024-11-15T10:05:15.880+09:00 DEBUG 77530 --- [http-nio-8080-exec-1] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2024-11-15T10:05:15.893+09:00 DEBUG 77530 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:05:15.904+09:00 DEBUG 77530 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/style.css", parameters={}
+2024-11-15T10:05:15.905+09:00 DEBUG 77530 --- [http-nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2024-11-15T10:05:15.911+09:00 DEBUG 77530 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:05:19.076+09:00 DEBUG 77530 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/admin/users/edit/10", parameters={}
+2024-11-15T10:05:19.077+09:00 DEBUG 77530 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.workoutsample.controller.admin.UserController#editUserForm(Long, Model)
+2024-11-15T10:05:19.089+09:00 DEBUG 77530 --- [http-nio-8080-exec-3] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2024-11-15T10:05:19.126+09:00 DEBUG 77530 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:05:19.145+09:00 DEBUG 77530 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/style.css", parameters={}
+2024-11-15T10:05:19.146+09:00 DEBUG 77530 --- [http-nio-8080-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2024-11-15T10:05:19.148+09:00 DEBUG 77530 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:05:25.193+09:00 DEBUG 77530 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : POST "/admin/users/edit/10", parameters={masked}
+2024-11-15T10:05:25.194+09:00 DEBUG 77530 --- [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.workoutsample.controller.admin.UserController#editUser(UserDTO, BindingResult)
+2024-11-15T10:05:25.272+09:00 DEBUG 77530 --- [http-nio-8080-exec-5] o.s.web.servlet.view.RedirectView        : View name [redirect:], model {}
+2024-11-15T10:05:25.272+09:00 DEBUG 77530 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 302 FOUND
+2024-11-15T10:05:25.285+09:00 DEBUG 77530 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/admin/users/showAll", parameters={}
+2024-11-15T10:05:25.285+09:00 DEBUG 77530 --- [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.workoutsample.controller.admin.UserController#showAll(Model)
+2024-11-15T10:05:25.305+09:00 DEBUG 77530 --- [http-nio-8080-exec-6] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2024-11-15T10:05:25.360+09:00 DEBUG 77530 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:05:25.382+09:00 DEBUG 77530 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/style.css", parameters={}
+2024-11-15T10:05:25.383+09:00 DEBUG 77530 --- [http-nio-8080-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2024-11-15T10:05:25.385+09:00 DEBUG 77530 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:05:29.484+09:00 DEBUG 77530 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/admin/users", parameters={}
+2024-11-15T10:05:29.486+09:00 DEBUG 77530 --- [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.workoutsample.controller.admin.UserController#selectMenu()
+2024-11-15T10:05:29.488+09:00 DEBUG 77530 --- [http-nio-8080-exec-8] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2024-11-15T10:05:29.494+09:00 DEBUG 77530 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:05:29.499+09:00 DEBUG 77530 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/style.css", parameters={}
+2024-11-15T10:05:29.500+09:00 DEBUG 77530 --- [http-nio-8080-exec-9] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2024-11-15T10:05:29.506+09:00 DEBUG 77530 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:05:30.602+09:00 DEBUG 77530 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/admin/users/show", parameters={}
+2024-11-15T10:05:30.603+09:00 DEBUG 77530 --- [http-nio-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.workoutsample.controller.admin.UserController#showUsersMenu()
+2024-11-15T10:05:30.604+09:00 DEBUG 77530 --- [http-nio-8080-exec-10] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2024-11-15T10:05:30.612+09:00 DEBUG 77530 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:05:30.618+09:00 DEBUG 77530 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/style.css", parameters={}
+2024-11-15T10:05:30.619+09:00 DEBUG 77530 --- [http-nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2024-11-15T10:05:30.627+09:00 DEBUG 77530 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:05:31.809+09:00 DEBUG 77530 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/admin/users/search", parameters={}
+2024-11-15T10:05:31.809+09:00 DEBUG 77530 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.workoutsample.controller.admin.UserController#searchUsers(String, Long, Model)
+2024-11-15T10:05:31.833+09:00 DEBUG 77530 --- [http-nio-8080-exec-2] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2024-11-15T10:05:31.848+09:00 DEBUG 77530 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:05:31.869+09:00 DEBUG 77530 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/style.css", parameters={}
+2024-11-15T10:05:31.870+09:00 DEBUG 77530 --- [http-nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2024-11-15T10:05:31.871+09:00 DEBUG 77530 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:05:36.009+09:00 DEBUG 77530 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/admin/users/search?username=&authorityId=1", parameters={masked}
+2024-11-15T10:05:36.010+09:00 DEBUG 77530 --- [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.workoutsample.controller.admin.UserController#searchUsers(String, Long, Model)
+2024-11-15T10:05:36.034+09:00 DEBUG 77530 --- [http-nio-8080-exec-4] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2024-11-15T10:05:36.060+09:00 DEBUG 77530 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:05:36.083+09:00 DEBUG 77530 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/style.css", parameters={}
+2024-11-15T10:05:36.084+09:00 DEBUG 77530 --- [http-nio-8080-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2024-11-15T10:05:36.086+09:00 DEBUG 77530 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:05:37.972+09:00 DEBUG 77530 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/admin/users", parameters={}
+2024-11-15T10:05:37.973+09:00 DEBUG 77530 --- [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.workoutsample.controller.admin.UserController#selectMenu()
+2024-11-15T10:05:37.974+09:00 DEBUG 77530 --- [http-nio-8080-exec-6] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2024-11-15T10:05:37.981+09:00 DEBUG 77530 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:05:37.991+09:00 DEBUG 77530 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/style.css", parameters={}
+2024-11-15T10:05:37.992+09:00 DEBUG 77530 --- [http-nio-8080-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2024-11-15T10:05:38.000+09:00 DEBUG 77530 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:05:40.248+09:00 DEBUG 77530 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/admin/logs", parameters={}
+2024-11-15T10:05:40.249+09:00 DEBUG 77530 --- [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.workoutsample.controller.admin.OperationLogController#selectMenu()
+2024-11-15T10:05:40.252+09:00 DEBUG 77530 --- [http-nio-8080-exec-8] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2024-11-15T10:05:40.261+09:00 DEBUG 77530 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:05:40.277+09:00 DEBUG 77530 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/style.css", parameters={}
+2024-11-15T10:05:40.278+09:00 DEBUG 77530 --- [http-nio-8080-exec-9] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2024-11-15T10:05:40.279+09:00 DEBUG 77530 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:05:41.451+09:00 DEBUG 77530 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/admin/logs/showAll", parameters={}
+2024-11-15T10:05:41.453+09:00 DEBUG 77530 --- [http-nio-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.workoutsample.controller.admin.OperationLogController#showLogs(Model)
+2024-11-15T10:05:41.482+09:00 DEBUG 77530 --- [http-nio-8080-exec-10] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2024-11-15T10:05:41.530+09:00 DEBUG 77530 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/style.css", parameters={}
+2024-11-15T10:05:41.532+09:00 DEBUG 77530 --- [http-nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2024-11-15T10:05:41.536+09:00 DEBUG 77530 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:05:41.547+09:00 DEBUG 77530 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:05:44.861+09:00 DEBUG 77530 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/admin/users", parameters={}
+2024-11-15T10:05:44.862+09:00 DEBUG 77530 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.workoutsample.controller.admin.UserController#selectMenu()
+2024-11-15T10:05:44.863+09:00 DEBUG 77530 --- [http-nio-8080-exec-2] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2024-11-15T10:05:44.869+09:00 DEBUG 77530 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:05:44.875+09:00 DEBUG 77530 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/style.css", parameters={}
+2024-11-15T10:05:44.876+09:00 DEBUG 77530 --- [http-nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2024-11-15T10:05:44.881+09:00 DEBUG 77530 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:05:46.381+09:00 DEBUG 77530 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/admin/logs", parameters={}
+2024-11-15T10:05:46.382+09:00 DEBUG 77530 --- [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.workoutsample.controller.admin.OperationLogController#selectMenu()
+2024-11-15T10:05:46.383+09:00 DEBUG 77530 --- [http-nio-8080-exec-4] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2024-11-15T10:05:46.389+09:00 DEBUG 77530 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:05:46.407+09:00 DEBUG 77530 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/style.css", parameters={}
+2024-11-15T10:05:46.408+09:00 DEBUG 77530 --- [http-nio-8080-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2024-11-15T10:05:46.410+09:00 DEBUG 77530 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:05:47.416+09:00 DEBUG 77530 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/admin/logs/search", parameters={}
+2024-11-15T10:05:47.416+09:00 DEBUG 77530 --- [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.workoutsample.controller.admin.OperationLogController#searchLogs(String, String, LocalDateTime, LocalDateTime, Model)
+2024-11-15T10:05:47.444+09:00 DEBUG 77530 --- [http-nio-8080-exec-6] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2024-11-15T10:05:47.489+09:00 DEBUG 77530 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/style.css", parameters={}
+2024-11-15T10:05:47.490+09:00 DEBUG 77530 --- [http-nio-8080-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2024-11-15T10:05:47.491+09:00 DEBUG 77530 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:05:47.506+09:00 DEBUG 77530 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:05:51.189+09:00 DEBUG 77530 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/admin/logs/search?username=1&action=&startDate=&endDate=", parameters={masked}
+2024-11-15T10:05:51.189+09:00 DEBUG 77530 --- [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.workoutsample.controller.admin.OperationLogController#searchLogs(String, String, LocalDateTime, LocalDateTime, Model)
+2024-11-15T10:05:51.211+09:00 DEBUG 77530 --- [http-nio-8080-exec-8] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2024-11-15T10:05:51.258+09:00 DEBUG 77530 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:05:51.259+09:00 DEBUG 77530 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/style.css", parameters={}
+2024-11-15T10:05:51.261+09:00 DEBUG 77530 --- [http-nio-8080-exec-9] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2024-11-15T10:05:51.263+09:00 DEBUG 77530 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:06:04.699+09:00 DEBUG 77530 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/admin/logs/search?username=1&action=%E5%89%8A%E9%99%A4&startDate=&endDate=", parameters={masked}
+2024-11-15T10:06:04.700+09:00 DEBUG 77530 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.workoutsample.controller.admin.OperationLogController#searchLogs(String, String, LocalDateTime, LocalDateTime, Model)
+2024-11-15T10:06:04.876+09:00 DEBUG 77530 --- [http-nio-8080-exec-1] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2024-11-15T10:06:04.893+09:00 DEBUG 77530 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:06:04.915+09:00 DEBUG 77530 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/style.css", parameters={}
+2024-11-15T10:06:04.917+09:00 DEBUG 77530 --- [http-nio-8080-exec-10] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2024-11-15T10:06:04.920+09:00 DEBUG 77530 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:06:29.422+09:00 DEBUG 77530 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/admin/logs/search?username=user1&action=%E5%89%8A%E9%99%A4&startDate=2024-10-31T10%3A06&endDate=", parameters={masked}
+2024-11-15T10:06:29.424+09:00 DEBUG 77530 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.workoutsample.controller.admin.OperationLogController#searchLogs(String, String, LocalDateTime, LocalDateTime, Model)
+2024-11-15T10:06:29.442+09:00 DEBUG 77530 --- [http-nio-8080-exec-2] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2024-11-15T10:06:29.457+09:00 DEBUG 77530 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:06:29.478+09:00 DEBUG 77530 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/style.css", parameters={}
+2024-11-15T10:06:29.479+09:00 DEBUG 77530 --- [http-nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2024-11-15T10:06:29.483+09:00 DEBUG 77530 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:06:39.199+09:00 DEBUG 77530 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/admin/logs/search?username=user1&action=%E5%89%8A%E9%99%A4&startDate=2024-10-31T10%3A06&endDate=2024-11-15T10%3A06", parameters={masked}
+2024-11-15T10:06:39.200+09:00 DEBUG 77530 --- [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.workoutsample.controller.admin.OperationLogController#searchLogs(String, String, LocalDateTime, LocalDateTime, Model)
+2024-11-15T10:06:39.226+09:00 DEBUG 77530 --- [http-nio-8080-exec-5] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2024-11-15T10:06:39.243+09:00 DEBUG 77530 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:06:39.258+09:00 DEBUG 77530 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/style.css", parameters={}
+2024-11-15T10:06:39.261+09:00 DEBUG 77530 --- [http-nio-8080-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2024-11-15T10:06:39.271+09:00 DEBUG 77530 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:06:41.763+09:00 DEBUG 77530 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/admin/logs", parameters={}
+2024-11-15T10:06:41.764+09:00 DEBUG 77530 --- [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.workoutsample.controller.admin.OperationLogController#selectMenu()
+2024-11-15T10:06:41.764+09:00 DEBUG 77530 --- [http-nio-8080-exec-6] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2024-11-15T10:06:41.769+09:00 DEBUG 77530 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:06:41.790+09:00 DEBUG 77530 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/style.css", parameters={}
+2024-11-15T10:06:41.791+09:00 DEBUG 77530 --- [http-nio-8080-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2024-11-15T10:06:41.793+09:00 DEBUG 77530 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:06:43.253+09:00 DEBUG 77530 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/admin/users", parameters={}
+2024-11-15T10:06:43.254+09:00 DEBUG 77530 --- [http-nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.workoutsample.controller.admin.UserController#selectMenu()
+2024-11-15T10:06:43.255+09:00 DEBUG 77530 --- [http-nio-8080-exec-9] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2024-11-15T10:06:43.261+09:00 DEBUG 77530 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:06:43.271+09:00 DEBUG 77530 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/style.css", parameters={}
+2024-11-15T10:06:43.272+09:00 DEBUG 77530 --- [http-nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2024-11-15T10:06:43.275+09:00 DEBUG 77530 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:06:44.327+09:00 DEBUG 77530 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/logout-success", parameters={}
+2024-11-15T10:06:44.328+09:00 DEBUG 77530 --- [http-nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2024-11-15T10:06:44.329+09:00 DEBUG 77530 --- [http-nio-8080-exec-2] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2024-11-15T10:06:44.330+09:00 DEBUG 77530 --- [http-nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource logout-success.]
+2024-11-15T10:06:44.330+09:00 DEBUG 77530 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2024-11-15T10:06:44.358+09:00 DEBUG 77530 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/login", parameters={}
+2024-11-15T10:06:44.358+09:00 DEBUG 77530 --- [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.workoutsample.controller.LoginController#login()
+2024-11-15T10:06:44.360+09:00 DEBUG 77530 --- [http-nio-8080-exec-4] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2024-11-15T10:06:44.365+09:00 DEBUG 77530 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:06:44.379+09:00 DEBUG 77530 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/style.css", parameters={}
+2024-11-15T10:06:44.381+09:00 DEBUG 77530 --- [http-nio-8080-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2024-11-15T10:06:44.388+09:00 DEBUG 77530 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:06:59.420+09:00  INFO 77530 --- [http-nio-8080-exec-7] c.e.workoutsample.config.SecurityConfig  : Redirecting to: /admin/users
+2024-11-15T10:06:59.433+09:00 DEBUG 77530 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/admin/users", parameters={}
+2024-11-15T10:06:59.433+09:00 DEBUG 77530 --- [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.workoutsample.controller.admin.UserController#selectMenu()
+2024-11-15T10:06:59.434+09:00 DEBUG 77530 --- [http-nio-8080-exec-6] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2024-11-15T10:06:59.437+09:00 DEBUG 77530 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:06:59.457+09:00 DEBUG 77530 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/style.css", parameters={}
+2024-11-15T10:06:59.458+09:00 DEBUG 77530 --- [http-nio-8080-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2024-11-15T10:06:59.461+09:00 DEBUG 77530 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:07:00.332+09:00 DEBUG 77530 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/admin/users/add", parameters={}
+2024-11-15T10:07:00.333+09:00 DEBUG 77530 --- [http-nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.workoutsample.controller.admin.UserController#addUserForm(Model)
+2024-11-15T10:07:00.341+09:00 DEBUG 77530 --- [http-nio-8080-exec-9] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2024-11-15T10:07:00.353+09:00 DEBUG 77530 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:07:00.369+09:00 DEBUG 77530 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/style.css", parameters={}
+2024-11-15T10:07:00.370+09:00 DEBUG 77530 --- [http-nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2024-11-15T10:07:00.375+09:00 DEBUG 77530 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:07:02.074+09:00 DEBUG 77530 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : POST "/admin/users/add", parameters={masked}
+2024-11-15T10:07:02.074+09:00 DEBUG 77530 --- [http-nio-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.workoutsample.controller.admin.UserController#addUser(UserDTO, BindingResult, Model)
+2024-11-15T10:07:02.084+09:00 DEBUG 77530 --- [http-nio-8080-exec-10] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2024-11-15T10:07:02.097+09:00 DEBUG 77530 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:07:02.121+09:00 DEBUG 77530 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/style.css", parameters={}
+2024-11-15T10:07:02.122+09:00 DEBUG 77530 --- [http-nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2024-11-15T10:07:02.124+09:00 DEBUG 77530 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:07:06.312+09:00 DEBUG 77530 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/admin/users", parameters={}
+2024-11-15T10:07:06.312+09:00 DEBUG 77530 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.workoutsample.controller.admin.UserController#selectMenu()
+2024-11-15T10:07:06.313+09:00 DEBUG 77530 --- [http-nio-8080-exec-3] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2024-11-15T10:07:06.316+09:00 DEBUG 77530 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:07:06.321+09:00 DEBUG 77530 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/style.css", parameters={}
+2024-11-15T10:07:06.321+09:00 DEBUG 77530 --- [http-nio-8080-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2024-11-15T10:07:06.323+09:00 DEBUG 77530 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:07:08.696+09:00 DEBUG 77530 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/logout-success", parameters={}
+2024-11-15T10:07:08.697+09:00 DEBUG 77530 --- [http-nio-8080-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2024-11-15T10:07:08.698+09:00 DEBUG 77530 --- [http-nio-8080-exec-7] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2024-11-15T10:07:08.698+09:00 DEBUG 77530 --- [http-nio-8080-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource logout-success.]
+2024-11-15T10:07:08.698+09:00 DEBUG 77530 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2024-11-15T10:07:08.726+09:00 DEBUG 77530 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/login", parameters={}
+2024-11-15T10:07:08.728+09:00 DEBUG 77530 --- [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.workoutsample.controller.LoginController#login()
+2024-11-15T10:07:08.730+09:00 DEBUG 77530 --- [http-nio-8080-exec-8] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2024-11-15T10:07:08.740+09:00 DEBUG 77530 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:07:08.745+09:00 DEBUG 77530 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/style.css", parameters={}
+2024-11-15T10:07:08.757+09:00 DEBUG 77530 --- [http-nio-8080-exec-9] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2024-11-15T10:07:08.761+09:00 DEBUG 77530 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:07:14.267+09:00 DEBUG 77530 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/login", parameters={}
+2024-11-15T10:07:14.268+09:00 DEBUG 77530 --- [http-nio-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.workoutsample.controller.LoginController#login()
+2024-11-15T10:07:14.269+09:00 DEBUG 77530 --- [http-nio-8080-exec-10] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2024-11-15T10:07:14.276+09:00 DEBUG 77530 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:07:14.299+09:00 DEBUG 77530 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/style.css", parameters={}
+2024-11-15T10:07:14.301+09:00 DEBUG 77530 --- [http-nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2024-11-15T10:07:14.304+09:00 DEBUG 77530 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T10:10:53.290+09:00  INFO 77530 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-15T10:10:53.295+09:00  INFO 77530 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-11-15T10:10:53.309+09:00  INFO 77530 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

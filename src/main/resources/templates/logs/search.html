@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+    th:replace="~{base :: layout(~{::title},~{::body/content()})}">
+<head>
+    <meta charset="UTF-8">
+    <title>ログ検索</title>
+</head>
+<body>
+    <h1>ログ検索</h1>
+
+    <!-- 検索フォーム -->
+    <form th:action="@{/admin/logs/search}" th:method="get">
+        <label>ユーザー名:</label>
+        <input type="text" name="username" th:value="${param.username}"><br>
+
+        <label>アクション:</label>
+        <input type="text" name="action" th:value="${param.action}"><br>
+
+        <label>開始日付:</label>
+        <input type="datetime-local" name="startDate" th:value="${param.startDate}"><br>
+
+        <label>終了日付:</label>
+        <input type="datetime-local" name="endDate" th:value="${param.endDate}"><br>
+
+        <button type="submit">検索</button>
+    </form>
+
+    <!-- 検索結果の表示 -->
+    <div>
+        <h2>検索結果</h2>
+        <p th:if="${#lists.isEmpty(logs)}">該当するログが見つかりませんでした。</p>
+        <table th:if="${!#lists.isEmpty(logs)}">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>ユーザー名</th>
+                    <th>アクション</th>
+                    <th>日時</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="log : ${logs}">
+                    <td th:text="${log.id}">ID</td>
+                    <td th:text="${log.username}">ユーザー名</td>
+                    <td th:text="${log.action}">アクション</td>
+                    <td th:text="${log.timestamp}">日時</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div>
+        <h2><a th:href="@{/admin/logs}">トップページへ</a></h2>
+    </div>
+</body>
+</html>

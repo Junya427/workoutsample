@@ -30,8 +30,8 @@
     <!-- 検索結果の表示 -->
     <div>
         <h2>検索結果</h2>
-        <p th:if="${message}" th:text="${message}"></p>
-        <table>
+        <p th:if="${#lists.isEmpty(sessionDTOs)}">該当するセッションが見つかりませんでした。</p>
+        <table th:if="${!#lists.isEmpty(sessionDTOs)}">
             <thead>
                 <tr>
                     <th>ID</th>
@@ -40,18 +40,18 @@
                     <th>操作</th>
                 </tr>
             </thead>
-        <tbody>
-            <tr th:each="trainingSession : ${sessionDTOs}">
-                <td th:text="${trainingSession.id}">ID</td>
-                <td th:text="${trainingSession.date}">日付</td>
-                <td th:text="${trainingSession.bodyPart.name}">部位</td>
-                <td>
-                    <a th:href="@{/user/sessions/details/{id}(id=${trainingSession.id})}">セッション詳細</a>
-                    <a th:href="@{/user/sessions/edit/{id}(id=${trainingSession.id})}">編集</a>
-                    <a th:href="@{/user/sessions/delete/{id}(id=${trainingSession.id})}">削除</a>
-                </td>
-            </tr>
-        </tbody>
+            <tbody>
+                <tr th:each="trainingSession : ${sessionDTOs}">
+                    <td th:text="${trainingSession.id}">ID</td>
+                    <td th:text="${trainingSession.date}">日付</td>
+                    <td th:text="${trainingSession.bodyPart != null ? trainingSession.bodyPart.name : 'N/A'}">部位</td>
+                    <td>
+                        <a th:href="@{/user/sessions/details/{id}(id=${trainingSession.id})}">セッション詳細</a>
+                        <a th:href="@{/user/sessions/edit/{id}(id=${trainingSession.id})}">編集</a>
+                        <a th:href="@{/user/sessions/delete/{id}(id=${trainingSession.id})}">削除</a>
+                    </td>
+                </tr>
+            </tbody>
         </table>
     </div>
     <div>

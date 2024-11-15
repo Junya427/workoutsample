@@ -42,22 +42,16 @@ public class SessionService {
     @Autowired
     private ExerciseMapper exerciseMapper;
 
-    public List<Session> findAllSessions() {
+    public List<SessionDTO> findAllSessions() {
         List<Session> sessions = sessionRepository.findAll();
         sessions.sort(Comparator.comparing(Session::getId));
-        return sessions;
+        return sessionMapper.toDTOList(sessions);
     }
 
-    public List<Session> findByUser(User user) {
+    public List<SessionDTO> findByUser(User user) {
         List<Session> sessions = sessionRepository.findByUser(user);
         sessions.sort(Comparator.comparing(Session::getId));
-        return sessions;
-    }
-
-    public Session saveSession(Session session, String username) {
-        Session savedSession = sessionRepository.save(session);
-        operationLogService.logOperation(username, "セッション(id=" + session.getId() + ")を追加しました");
-        return savedSession;
+        return sessionMapper.toDTOList(sessions);
     }
 
     public Session saveSession(SessionDTO sessionDTO, String username) {
@@ -65,10 +59,6 @@ public class SessionService {
         Session savedSession = sessionRepository.save(session);
         operationLogService.logOperation(username, "セッション(id=" + session.getId() + ")を追加しました");
         return savedSession;
-    }
-
-    public Optional<Session> findSessionById(Long id) {
-        return sessionRepository.findById(id);
     }
 
     public Optional<SessionDTO> findSessionDTOById(Long id) {
@@ -81,16 +71,15 @@ public class SessionService {
 
         return session.getExercises().stream()
             .sorted(Comparator.comparing(Exercise::getId))
-            .map(exerciseMapper::toDTO) // DTOに変換
+            .map(exerciseMapper::toDTO)
             .collect(Collectors.toList());
     }
 
-
-    public Session updateSession(SessionDTO updateSessionDTO, String username) {
-        operationLogService.logOperation(username, "セッション(id=" + updateSessionDTO.getId() + ")を削除しました");
+    public SessionDTO updateSession(SessionDTO updateSessionDTO, String username) {
         Session session = sessionMapper.toEntity(updateSessionDTO);
         Session savedSession = sessionRepository.save(session);
-        return savedSession;
+        operationLogService.logOperation(username, "セッション(id=" + savedSession.getId() + ")を編集しました");
+        return sessionMapper.toDTO(savedSession);
     }
 
     public void deleteSessionById(Long id, String username) {
@@ -106,6 +95,21 @@ public class SessionService {
             operationLogService.logOperation(username, "セッション(id=" + id + ")を削除しました");
         }
     }
+
+    /*public List<SessionDTO> searchSessions(User user, LocalDate date, Long bodyPartId) {
+        System.out.println("--------");
+        System.out.println("ユーザー名" + user.getUsername());
+        System.out.println("日時" + date);
+        System.out.println("部位" + bodyPartId);
+        System.out.println("--------");
+        return sessionRepository.findAll().stream()
+            .filter(session -> user == null || session.getUser().equals(user))
+            .filter(session -> date == null || session.getDate().equals(date))
+            .filter(session -> bodyPartId == null || session.getBodyPart().getId().equals(bodyPartId))
+            .map(sessionMapper::toDTO)
+            .toList();
+    }*/
+    
 
     public List<SessionDTO> findByUserAndDate(User loginUser, LocalDate date) {
         return sessionRepository.findByUserAndDate(loginUser, date).stream()

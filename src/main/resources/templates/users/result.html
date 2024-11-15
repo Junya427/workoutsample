@@ -11,10 +11,10 @@
     
     <!-- セッション情報を表示 -->
     
-    <h2>ユーザーネーム: <span th:text="${user.username}"></span></h2>
-    <p>アカウント: <span th:text="${user.enabled} ? '有効' : '無効'"></span></p>
+    <h2>ユーザーネーム: <span th:text="${userDTO.username}"></span></h2>
+    <p>アカウント: <span th:text="${userDTO.enabled} ? '有効' : '無効'"></span></p>
     
-    <div th:each="authority : ${user.authorities}">
+    <div th:each="authority : ${userDTO.authorities}">
         <p>権限:
             <span th:switch="${authority.authority}">
                 <span th:case="'ROLE_ADMIN'">管理者</span>

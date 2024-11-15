@@ -12,7 +12,7 @@ import com.example.workoutsample.model.User;
 public interface UserRepository extends JpaRepository<User, Long> {
     User findByUsername(String username);
 
-    List<User> findByUsernameAndAuthorities_Id(String username, Long authorityId);
+    List<User> findByUsernameContainingAndAuthorities_Id(String username, Long authorityId);
 
     // ユーザーネームの部分一致で検索
     List<User> findByUsernameContaining(String username);

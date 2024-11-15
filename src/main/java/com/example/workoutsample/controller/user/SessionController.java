@@ -18,7 +18,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.example.workoutsample.dto.BodyPartDTO;
 import com.example.workoutsample.dto.ExerciseDTO;
 import com.example.workoutsample.dto.SessionDTO;
-import com.example.workoutsample.mapper.SessionMapper;
 import com.example.workoutsample.model.Session;
 import com.example.workoutsample.model.User;
 import com.example.workoutsample.service.BodyPartService;
@@ -47,8 +46,6 @@ public class SessionController {
     @Autowired
     private CustomUserDetailsService customUserDetailsService;
 
-    @Autowired
-    private SessionMapper sessionMapper;
 
     @GetMapping
     public String selectMenu(){
@@ -69,10 +66,9 @@ public class SessionController {
         User loginUser = customUserDetailsService.findUserByUsername(username);
 
         // ログインユーザーに関連するトレーニングセッションを取得
-        List<Session> sessions = sessionService.findByUser(loginUser);
+        List<SessionDTO> sessionDTOs = sessionService.findByUser(loginUser);
 
-        List<SessionDTO> sessionsDTO = sessionMapper.toDTOList(sessions);
-        model.addAttribute("sessions", sessionsDTO);
+        model.addAttribute("sessions", sessionDTOs);
         return "sessions/show-all";
     }
 
@@ -157,13 +153,33 @@ public class SessionController {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         String username = authentication.getName();  // ログイン中のユーザー名を取得
 
-        Session session = sessionService.findSessionById(id)
+        SessionDTO sessionDTO = sessionService.findSessionDTOById(id)
             .orElseThrow(() -> new EntityNotFoundException("Exercise not found with id: " + id));
-        exerciseService.deleteExerciseBySession(session, username);
+        exerciseService.deleteExerciseBySession(sessionDTO, username);
         sessionService.deleteSessionById(id, username);
 
         return "redirect:/user/sessions/showAll";
     }
+
+    /*@GetMapping("/search")
+public String searchSessions(@RequestParam(value = "date", required = false) LocalDate date,
+                            @RequestParam(value = "bodyPartId", required = false) Long bodyPartId,
+                            Model model) {
+
+    Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+    String username = authentication.getName();
+    User loginUser = customUserDetailsService.findUserByUsername(username);
+
+    List<SessionDTO> sessionDTOs = sessionService.searchSessions(loginUser, date, bodyPartId);
+    model.addAttribute("sessionDTOs", sessionDTOs);
+
+    List<BodyPartDTO> bodyPartDTOs = bodyPartService.findAllBodyPartDTOs();
+    model.addAttribute("bodyParts", bodyPartDTOs);
+
+
+    return "sessions/search";
+} */
+
 
     @GetMapping("/search")
     public String searchSessions(
@@ -177,8 +193,10 @@ public class SessionController {
         // カスタムUserDetailsServiceからユーザー情報を取得
         User loginUser = customUserDetailsService.findUserByUsername(username);
 
+        //List<SessionDTO> sessionDTOs = sessionService.searchSessions(loginUser, date, bodyPartId);
 
-        // 検索条件に応じてセッションをフィルタリング
+
+        //検索条件に応じてセッションをフィルタリング
         if (date != null && bodyPartId != null) {
             List<SessionDTO> sessionDTOs = sessionService.findByUserAndDateAndBodyPart(loginUser, date, bodyPartId);
             model.addAttribute("sessionDTOs", sessionDTOs);
@@ -190,6 +208,7 @@ public class SessionController {
             List<SessionDTO> sessionDTOs = sessionService.findByUserAndBodyPart(loginUser, bodyPartId);
             model.addAttribute("sessionDTOs", sessionDTOs);
         }
+
         // ジャンルリストをモデルに追加
         List<BodyPartDTO> bodyPartDTOs = bodyPartService.findAllBodyPartDTOs();
         model.addAttribute("bodyParts", bodyPartDTOs);

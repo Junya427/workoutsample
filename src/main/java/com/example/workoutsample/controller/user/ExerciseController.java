@@ -15,8 +15,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.example.workoutsample.dto.ExerciseDTO;
+import com.example.workoutsample.dto.SessionDTO;
 import com.example.workoutsample.model.Exercise;
-import com.example.workoutsample.model.Session;
 import com.example.workoutsample.model.User;
 import com.example.workoutsample.service.CustomUserDetailsService;
 import com.example.workoutsample.service.ExerciseService;
@@ -86,7 +86,7 @@ public class ExerciseController {
             model.addAttribute("exerciseDTO", exerciseDTO);
             return "exercises/add-exercise";
         }
-        Session session = sessionService.findSessionById(sessionId)
+        SessionDTO session = sessionService.findSessionDTOById(sessionId)
             .orElseThrow(() -> new EntityNotFoundException("Exercise not found with id: " + sessionId));
         
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();

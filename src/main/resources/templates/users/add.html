@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>ユーザーの追加</h1>
-    <form th:action="@{/admin/users/add}" th:object="${user}" th:method="post">
+    <form th:action="@{/admin/users/add}" th:object="${userDTO}" th:method="post">
         <label>ユーザー名</label>
         <input type="text" th:field="*{username}" th:errorclass="invalid"><br>
         <div class="red" th:errors="*{username}"></div>

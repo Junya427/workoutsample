@@ -66,7 +66,7 @@ public class Exercise {
     private boolean isDeleted = false;
 
     
-    public Exercise(Long id, String name, Long weight, Long reps, Long sets, String weightStatus, String repStatus, Session session, User user) {
+    public Exercise(Long id, String name, Long weight, Long reps, Long sets, String weightStatus, String repStatus, Session session, User user, boolean isDeleted) {
         this.id = id;
         this.name = name;
         this.weight = weight;
@@ -76,8 +76,10 @@ public class Exercise {
         this.repStatus = repStatus;
         this.session = session;
         this.user = user;
+        this.isDeleted = isDeleted; // 追加
         updateVolume();
     }
+    
 
     
     public Exercise() {

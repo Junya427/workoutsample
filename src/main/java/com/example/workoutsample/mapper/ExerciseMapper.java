@@ -37,7 +37,8 @@ public class ExerciseMapper {
             exercise.getWeightStatus(),
             exercise.getRepStatus(),
             exercise.getSession().getId(),
-            exercise.getUser().getId()
+            exercise.getUser().getId(),
+            exercise.isDeleted()
         );
     }
 
@@ -60,7 +61,8 @@ public class ExerciseMapper {
             exerciseDTO.getWeightStatus(),
             exerciseDTO.getRepStatus(),
             session, // セッションを引数として渡す
-            userService.findUserById(exerciseDTO.getUserId())
+            userService.findUserById(exerciseDTO.getUserId()),
+            exerciseDTO.isDeleted()
         );
     }
     

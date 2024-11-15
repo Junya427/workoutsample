@@ -28,19 +28,19 @@ public class ExerciseDTO {
     @Column(nullable = false)
     private Long sets;              // セット数
 
-    
     private Long volume;            // ボリューム
-    private String weightStatus;     // 重量の状態
-    private String repStatus;        // 回数の状態
+    private String weightStatus;    // 重量の状態
+    private String repStatus;       // 回数の状態
     private Long sessionId;         // セッションID
     private Long userId;            // ユーザーID
+    private boolean isDeleted;      // 削除フラグ
 
     // コンストラクタ
     public ExerciseDTO() {
     }
 
     public ExerciseDTO(Long id, String name, Long weight, Long reps, Long sets, Long volume,
-                    String weightStatus, String repStatus, Long sessionId, Long userId) {
+                    String weightStatus, String repStatus, Long sessionId, Long userId, boolean isDeleted) {
         this.id = id;
         this.name = name;
         this.weight = weight;
@@ -51,6 +51,7 @@ public class ExerciseDTO {
         this.repStatus = repStatus;
         this.sessionId = sessionId;
         this.userId = userId;
+        this.isDeleted = isDeleted;
     }
 
     // ゲッターとセッター
@@ -132,5 +133,13 @@ public class ExerciseDTO {
 
     public void setUserId(Long userId) {
         this.userId = userId;
+    }
+
+    public boolean isDeleted() {
+        return isDeleted;
+    }
+
+    public void setDeleted(boolean isDeleted) {
+        this.isDeleted = isDeleted;
     }
 }
