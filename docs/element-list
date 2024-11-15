@@ -1,0 +1,11 @@
+com.example.workoutsample
+com.example.workoutsample.config
+com.example.workoutsample.controller
+com.example.workoutsample.controller.admin
+com.example.workoutsample.controller.user
+com.example.workoutsample.converter
+com.example.workoutsample.dto
+com.example.workoutsample.mapper
+com.example.workoutsample.model
+com.example.workoutsample.repository
+com.example.workoutsample.service
