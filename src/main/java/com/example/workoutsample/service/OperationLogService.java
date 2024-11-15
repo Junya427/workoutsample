@@ -11,6 +11,10 @@ import com.example.workoutsample.mapper.OperationLogMapper;
 import com.example.workoutsample.model.OperationLog;
 import com.example.workoutsample.repository.OperationLogRepository;
 
+/**
+ * 操作ログに関するビジネスロジックを提供するサービスクラスです。
+ * 操作ログの記録、取得、条件検索の機能をサポートします。
+ */
 @Service
 public class OperationLogService {
 
