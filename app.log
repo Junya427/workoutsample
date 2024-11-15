@@ -1935,3 +1935,115 @@
 2024-11-15T13:36:54.639+09:00  INFO 83661 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-11-15T13:36:54.659+09:00  INFO 83661 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2024-11-15T13:36:54.671+09:00  INFO 83661 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-11-15T13:57:25.568+09:00  INFO 85210 --- [main] c.e.w.WorkoutsampleApplication           : Starting WorkoutsampleApplication using Java 21.0.2 with PID 85210 (/Users/junya/webApp/workoutsample/build/classes/java/main started by junya in /Users/junya/webApp/workoutsample)
+2024-11-15T13:57:25.572+09:00  INFO 85210 --- [main] c.e.w.WorkoutsampleApplication           : No active profile set, falling back to 1 default profile: "default"
+2024-11-15T13:57:28.320+09:00  INFO 85210 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-15T13:57:28.574+09:00  INFO 85210 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 169 ms. Found 6 JPA repository interfaces.
+2024-11-15T13:57:30.234+09:00  INFO 85210 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-11-15T13:57:30.461+09:00  INFO 85210 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4720 ms
+2024-11-15T13:57:30.970+09:00  INFO 85210 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-15T13:57:31.295+09:00  INFO 85210 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-11-15T13:57:31.466+09:00  INFO 85210 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-11-15T13:57:32.647+09:00  INFO 85210 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-15T13:57:32.738+09:00  INFO 85210 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-11-15T13:57:33.322+09:00  INFO 85210 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7e2bc2f4
+2024-11-15T13:57:33.326+09:00  INFO 85210 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-11-15T13:57:36.235+09:00  INFO 85210 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-15T13:57:36.496+09:00  INFO 85210 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-15T13:57:37.828+09:00  INFO 85210 --- [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2024-11-15T13:57:38.067+09:00  INFO 85210 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-11-15T13:57:38.266+09:00 DEBUG 85210 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 35 mappings in 'requestMappingHandlerMapping'
+2024-11-15T13:57:38.514+09:00 DEBUG 85210 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-11-15T13:57:38.866+09:00 DEBUG 85210 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-11-15T13:57:38.970+09:00 DEBUG 85210 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-11-15T13:57:39.365+09:00  INFO 85210 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-11-15T13:57:39.396+09:00  INFO 85210 --- [main] c.e.w.WorkoutsampleApplication           : Started WorkoutsampleApplication in 15.027 seconds (process running for 16.764)
+2024-11-15T13:57:39.429+09:00  INFO 85210 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-15T13:57:39.437+09:00  INFO 85210 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-11-15T13:57:39.444+09:00  INFO 85210 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-11-15T14:01:02.393+09:00  INFO 85404 --- [main] c.e.w.WorkoutsampleApplication           : Starting WorkoutsampleApplication using Java 21.0.2 with PID 85404 (/Users/junya/webApp/workoutsample/build/classes/java/main started by junya in /Users/junya/webApp/workoutsample)
+2024-11-15T14:01:02.399+09:00  INFO 85404 --- [main] c.e.w.WorkoutsampleApplication           : No active profile set, falling back to 1 default profile: "default"
+2024-11-15T14:01:06.228+09:00  INFO 85404 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-15T14:01:06.516+09:00  INFO 85404 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 230 ms. Found 6 JPA repository interfaces.
+2024-11-15T14:01:08.729+09:00  INFO 85404 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-11-15T14:01:08.786+09:00  INFO 85404 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-15T14:01:08.788+09:00  INFO 85404 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-11-15T14:01:08.939+09:00  INFO 85404 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-15T14:01:08.940+09:00  INFO 85404 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6224 ms
+2024-11-15T14:01:09.459+09:00  INFO 85404 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-15T14:01:09.754+09:00  INFO 85404 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-11-15T14:01:09.879+09:00  INFO 85404 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-11-15T14:01:10.968+09:00  INFO 85404 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-15T14:01:11.064+09:00  INFO 85404 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-11-15T14:01:11.603+09:00  INFO 85404 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7845b21a
+2024-11-15T14:01:11.608+09:00  INFO 85404 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-11-15T14:01:14.568+09:00  INFO 85404 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-15T14:01:14.735+09:00  INFO 85404 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-15T14:01:16.016+09:00  INFO 85404 --- [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2024-11-15T14:01:16.239+09:00  INFO 85404 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-11-15T14:01:16.462+09:00 DEBUG 85404 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 35 mappings in 'requestMappingHandlerMapping'
+2024-11-15T14:01:16.729+09:00 DEBUG 85404 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-11-15T14:01:17.087+09:00 DEBUG 85404 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-11-15T14:01:17.189+09:00 DEBUG 85404 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-11-15T14:01:17.484+09:00  INFO 85404 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-11-15T14:01:17.512+09:00  INFO 85404 --- [main] c.e.w.WorkoutsampleApplication           : Started WorkoutsampleApplication in 17.102 seconds (process running for 19.088)
+2024-11-15T14:01:25.369+09:00  INFO 85404 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-15T14:01:25.370+09:00  INFO 85404 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-11-15T14:01:25.371+09:00 DEBUG 85404 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2024-11-15T14:01:25.371+09:00 DEBUG 85404 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2024-11-15T14:01:25.372+09:00 DEBUG 85404 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2024-11-15T14:01:25.375+09:00 DEBUG 85404 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@751526a7
+2024-11-15T14:01:25.377+09:00 DEBUG 85404 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@1299fed3
+2024-11-15T14:01:25.378+09:00 DEBUG 85404 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-11-15T14:01:25.379+09:00  INFO 85404 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2024-11-15T14:01:25.550+09:00 DEBUG 85404 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/login", parameters={}
+2024-11-15T14:01:25.553+09:00 DEBUG 85404 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.workoutsample.controller.LoginController#login()
+2024-11-15T14:01:25.590+09:00 DEBUG 85404 --- [http-nio-8080-exec-2] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2024-11-15T14:01:26.379+09:00 DEBUG 85404 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T14:01:26.430+09:00 DEBUG 85404 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/style.css", parameters={}
+2024-11-15T14:01:26.432+09:00 DEBUG 85404 --- [http-nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2024-11-15T14:01:26.467+09:00 DEBUG 85404 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T14:01:28.759+09:00  INFO 85404 --- [http-nio-8080-exec-4] c.e.workoutsample.config.SecurityConfig  : Redirecting to: /admin/users
+2024-11-15T14:01:28.771+09:00 DEBUG 85404 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/admin/users", parameters={}
+2024-11-15T14:01:28.772+09:00 DEBUG 85404 --- [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.workoutsample.controller.admin.UserController#selectMenu()
+2024-11-15T14:01:28.781+09:00 DEBUG 85404 --- [http-nio-8080-exec-5] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2024-11-15T14:01:28.796+09:00 DEBUG 85404 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T14:01:28.825+09:00 DEBUG 85404 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/style.css", parameters={}
+2024-11-15T14:01:28.830+09:00 DEBUG 85404 --- [http-nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2024-11-15T14:01:28.833+09:00 DEBUG 85404 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T14:01:30.499+09:00 DEBUG 85404 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/admin/users/show", parameters={}
+2024-11-15T14:01:30.500+09:00 DEBUG 85404 --- [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.workoutsample.controller.admin.UserController#showUsersMenu()
+2024-11-15T14:01:30.503+09:00 DEBUG 85404 --- [http-nio-8080-exec-7] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2024-11-15T14:01:30.516+09:00 DEBUG 85404 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T14:01:30.523+09:00 DEBUG 85404 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/style.css", parameters={}
+2024-11-15T14:01:30.527+09:00 DEBUG 85404 --- [http-nio-8080-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2024-11-15T14:01:30.534+09:00 DEBUG 85404 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T14:01:31.419+09:00 DEBUG 85404 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/admin/users/showAll", parameters={}
+2024-11-15T14:01:31.420+09:00 DEBUG 85404 --- [http-nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.workoutsample.controller.admin.UserController#showAll(Model)
+2024-11-15T14:01:31.594+09:00 DEBUG 85404 --- [http-nio-8080-exec-9] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2024-11-15T14:01:31.649+09:00 DEBUG 85404 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T14:01:31.656+09:00 DEBUG 85404 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/style.css", parameters={}
+2024-11-15T14:01:31.662+09:00 DEBUG 85404 --- [http-nio-8080-exec-10] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2024-11-15T14:01:31.672+09:00 DEBUG 85404 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T14:01:32.972+09:00 DEBUG 85404 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/admin/users", parameters={}
+2024-11-15T14:01:32.973+09:00 DEBUG 85404 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.workoutsample.controller.admin.UserController#selectMenu()
+2024-11-15T14:01:32.975+09:00 DEBUG 85404 --- [http-nio-8080-exec-1] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2024-11-15T14:01:32.986+09:00 DEBUG 85404 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T14:01:32.993+09:00 DEBUG 85404 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/style.css", parameters={}
+2024-11-15T14:01:32.994+09:00 DEBUG 85404 --- [http-nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2024-11-15T14:01:32.998+09:00 DEBUG 85404 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T14:01:34.319+09:00 DEBUG 85404 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/logout-success", parameters={}
+2024-11-15T14:01:34.320+09:00 DEBUG 85404 --- [http-nio-8080-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2024-11-15T14:01:34.321+09:00 DEBUG 85404 --- [http-nio-8080-exec-4] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2024-11-15T14:01:34.326+09:00 DEBUG 85404 --- [http-nio-8080-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource logout-success.]
+2024-11-15T14:01:34.327+09:00 DEBUG 85404 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2024-11-15T14:01:34.365+09:00 DEBUG 85404 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/login", parameters={}
+2024-11-15T14:01:34.366+09:00 DEBUG 85404 --- [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.workoutsample.controller.LoginController#login()
+2024-11-15T14:01:34.367+09:00 DEBUG 85404 --- [http-nio-8080-exec-6] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2024-11-15T14:01:34.378+09:00 DEBUG 85404 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T14:01:34.384+09:00 DEBUG 85404 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/style.css", parameters={}
+2024-11-15T14:01:34.387+09:00 DEBUG 85404 --- [http-nio-8080-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2024-11-15T14:01:34.391+09:00 DEBUG 85404 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T14:01:47.089+09:00  INFO 85404 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-15T14:01:47.127+09:00  INFO 85404 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-11-15T14:01:47.147+09:00  INFO 85404 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
