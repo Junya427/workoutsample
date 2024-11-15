@@ -1932,3 +1932,6 @@
 2024-11-15T13:32:47.152+09:00 DEBUG 83661 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/style.css", parameters={}
 2024-11-15T13:32:47.153+09:00 DEBUG 83661 --- [http-nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
 2024-11-15T13:32:47.158+09:00 DEBUG 83661 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-15T13:36:54.639+09:00  INFO 83661 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-15T13:36:54.659+09:00  INFO 83661 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-11-15T13:36:54.671+09:00  INFO 83661 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
