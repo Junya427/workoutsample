@@ -15,6 +15,10 @@ import com.example.workoutsample.model.User;
 import com.example.workoutsample.repository.AuthorityRepository;
 import com.example.workoutsample.repository.UserRepository;
 
+/**
+ * Spring Securityの認証に対応するカスタムサービスクラスです。
+ * ユーザー情報をロードし、必要な権限情報を含む{@link UserDetails}オブジェクトを提供します。
+ */
 @Service
 public class CustomUserDetailsService implements UserDetailsService {
 
@@ -24,6 +28,13 @@ public class CustomUserDetailsService implements UserDetailsService {
     @Autowired
     private AuthorityRepository authorityRepository;
 
+    /**
+     * 指定されたユーザーネームに基づいて{@link UserDetails}をロードします。
+     * 
+     * @param username 検索するユーザーネーム
+     * @return 指定されたユーザーに対応する{@link UserDetails}オブジェクト
+     * @throws UsernameNotFoundException ユーザーが見つからない場合にスローされます
+     */
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         User user = userRepository.findByUsername(username);
@@ -46,7 +57,13 @@ public class CustomUserDetailsService implements UserDetailsService {
         );
     }
 
-    // 新しいメソッド：独自のUserオブジェクトを取得する
+    /**
+     * 指定されたユーザーネームに基づいて独自の{@link User}オブジェクトを検索します。
+     * 
+     * @param username 検索するユーザーネーム
+     * @return 指定されたユーザーに対応する{@link User}オブジェクト
+     * @throws UsernameNotFoundException ユーザーが見つからない場合にスローされます
+     */
     public User findUserByUsername(String username) throws UsernameNotFoundException {
         User user = userRepository.findByUsername(username);
         

@@ -8,9 +8,19 @@ import org.springframework.stereotype.Component;
 import com.example.workoutsample.dto.OperationLogDTO;
 import com.example.workoutsample.model.OperationLog;
 
+/**
+ * OperationLogエンティティとOperationLogDTOの間の変換を行うマッパークラスです。
+ * エンティティとDTO間のデータ変換ロジックを提供します。
+ */
 @Component
 public class OperationLogMapper {
 
+    /**
+     * OperationLogエンティティをOperationLogDTOに変換します。
+     *
+     * @param operationLog OperationLogエンティティ
+     * @return OperationLogDTOオブジェクト
+     */
     public OperationLogDTO toDTO(OperationLog operationLog) {
         if (operationLog == null) {
             return null;
@@ -23,12 +33,24 @@ public class OperationLogMapper {
         );
     }
 
+    /**
+     * OperationLogエンティティのリストをOperationLogDTOのリストに変換します。
+     *
+     * @param operationLogs OperationLogエンティティのリスト
+     * @return OperationLogDTOのリスト
+     */
     public List<OperationLogDTO> toDTOList(List<OperationLog> operationLogs) {
         return operationLogs.stream()
                 .map(this::toDTO)
                 .collect(Collectors.toList());
     }
 
+    /**
+     * OperationLogDTOをOperationLogエンティティに変換します。
+     *
+     * @param operationLogDTO OperationLogDTOオブジェクト
+     * @return OperationLogエンティティ
+     */
     public OperationLog toEntity(OperationLogDTO operationLogDTO) {
         if (operationLogDTO == null) {
             return null;
@@ -41,4 +63,3 @@ public class OperationLogMapper {
         return operationLog;
     }
 }
-

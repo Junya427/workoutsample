@@ -22,9 +22,14 @@ import com.example.workoutsample.service.UserService;
 
 import jakarta.validation.Valid;
 
+/**
+ * 管理者向けのユーザー管理を行うコントローラークラスです。
+ * ユーザーの追加、編集、削除、検索、表示などの機能を提供します。
+ */
 @Controller
 @RequestMapping("/admin/users")
 public class UserController {
+
     @Autowired
     private UserService userService;
 
@@ -34,16 +39,32 @@ public class UserController {
     @Autowired
     private PasswordEncoder passwordEncoder;
 
+    /**
+     * ユーザー管理メニュー画面を表示します。
+     *
+     * @return ユーザー管理メニューのビュー名
+     */
     @GetMapping
     public String selectMenu() {
         return "users/menu";
     }
 
+    /**
+     * ユーザー表示メニュー画面を表示します。
+     *
+     * @return ユーザー表示メニューのビュー名
+     */
     @GetMapping("show")
     public String showUsersMenu() {
         return "users/show-menu";
     }
 
+    /**
+     * すべてのユーザー情報を取得して表示します。
+     *
+     * @param model ビューに渡すデータを格納する {@link Model} オブジェクト
+     * @return すべてのユーザー情報を表示するビュー名
+     */
     @GetMapping("showAll")
     public String showAll(Model model) {
         List<UserDTO> users = userService.findAllUsers();
@@ -51,6 +72,12 @@ public class UserController {
         return "users/show-all";
     }
 
+    /**
+     * 新しいユーザーを追加するフォームを表示します。
+     *
+     * @param model ビューに渡すデータを格納する {@link Model} オブジェクト
+     * @return 新しいユーザー追加フォームのビュー名
+     */
     @GetMapping("/add")
     public String addUserForm(Model model) {
         model.addAttribute("userDTO", new UserDTO());
@@ -58,6 +85,14 @@ public class UserController {
         return "users/add";
     }
 
+    /**
+     * 新しいユーザーを追加します。
+     *
+     * @param userDTO ユーザー情報を格納するデータ転送オブジェクト
+     * @param result 入力データのバリデーション結果
+     * @param model ビューに渡すデータを格納する {@link Model} オブジェクト
+     * @return 処理結果のビュー名
+     */
     @PostMapping("/add")
     public String addUser(@Valid UserDTO userDTO, BindingResult result, Model model) {
         if (result.hasErrors()) {
@@ -76,6 +111,13 @@ public class UserController {
         return "users/result";
     }
 
+    /**
+     * ユーザー情報の編集フォームを表示します。
+     *
+     * @param id 編集対象のユーザーID
+     * @param model ビューに渡すデータを格納する {@link Model} オブジェクト
+     * @return ユーザー編集フォームのビュー名
+     */
     @GetMapping("/edit/{id}")
     public String editUserForm(@PathVariable("id") Long id, Model model) {
         UserDTO userDTO = userService.findUserDTOById(id);
@@ -85,6 +127,13 @@ public class UserController {
         return "/users/edit";
     }
 
+    /**
+     * ユーザー情報を更新します。
+     *
+     * @param userDTO ユーザー情報を格納するデータ転送オブジェクト
+     * @param result 入力データのバリデーション結果
+     * @return ユーザー一覧画面へのリダイレクトURL
+     */
     @PostMapping("/edit/{id}")
     public String editUser(@Valid UserDTO userDTO, BindingResult result) {
         if (result.hasErrors()) {
@@ -98,6 +147,12 @@ public class UserController {
         return "redirect:/admin/users/showAll";
     }
 
+    /**
+     * 指定されたユーザーを削除します。
+     *
+     * @param id 削除対象のユーザーID
+     * @return ユーザー一覧画面へのリダイレクトURL
+     */
     @GetMapping("/delete/{id}")
     public String deleteUserForm(@PathVariable("id") Long id) {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
@@ -106,10 +161,19 @@ public class UserController {
         return "redirect:/admin/users/showAll";
     }
 
+    /**
+     * 指定された条件でユーザーを検索し、結果を表示します。
+     *
+     * @param username ユーザー名でのフィルタリング条件（任意）
+     * @param authorityId 権限IDでのフィルタリング条件（任意）
+     * @param model ビューに渡すデータを格納する {@link Model} オブジェクト
+     * @return 検索結果を表示するビュー名
+     */
     @GetMapping("/search")
-    public String searchUsers(@RequestParam(value = "username", required = false) String username,
-                            @RequestParam(value = "authorityId", required = false) Long authorityId,
-                            Model model) {
+    public String searchUsers(
+            @RequestParam(value = "username", required = false) String username,
+            @RequestParam(value = "authorityId", required = false) Long authorityId,
+            Model model) {
         List<UserDTO> users = userService.searchUsers(username, authorityId);
         model.addAttribute("users", users);
 

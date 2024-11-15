@@ -7,16 +7,34 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-// UserDetailsを継承しているので
-// Spring Securityの認証クラスとして認識される
+/**
+ * Spring Securityの認証に使用されるカスタムUserDetailsクラスです。
+ * Spring Securityの{@link UserDetails}インターフェースを実装し、
+ * カスタムUserエンティティと統合しています。
+ */
 public class CustomUserDetails implements UserDetails {
-    // 自作のUserクラスを持つように拡張する
+
+    /**
+     * カスタムUserエンティティのインスタンス。
+     */
     private User user;
 
+    /**
+     * カスタムUserエンティティを使用してCustomUserDetailsを作成します。
+     *
+     * @param user カスタムUserエンティティ
+     */
     public CustomUserDetails(User user) {
         this.user = user;
     }
 
+    /**
+     * ユーザーの権限を取得します。
+     * カスタムUserエンティティの{@code authorities}フィールドから
+     * {@link SimpleGrantedAuthority}オブジェクトのリストを生成します。
+     *
+     * @return 権限のリスト
+     */
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return user.getAuthorities().stream()
@@ -24,37 +42,72 @@ public class CustomUserDetails implements UserDetails {
             .collect(Collectors.toList());
     }
 
+    /**
+     * ユーザーのパスワードを取得します。
+     *
+     * @return ユーザーのパスワード
+     */
     @Override
     public String getPassword() {
-        return user.getPassword(); // カスタム User エンティティのパスワードを返す
+        return user.getPassword();
     }
 
+    /**
+     * ユーザー名を取得します。
+     *
+     * @return ユーザー名
+     */
     @Override
     public String getUsername() {
-        return user.getUsername(); // カスタム User エンティティのユーザー名を返す
+        return user.getUsername();
     }
 
+    /**
+     * アカウントが期限切れでないかどうかを示します。
+     *
+     * @return true（アカウントは常に有効）
+     */
     @Override
     public boolean isAccountNonExpired() {
-        return true; // アカウントが期限切れでないかを示す
+        return true;
     }
 
+    /**
+     * アカウントがロックされていないかどうかを示します。
+     *
+     * @return true（アカウントは常にロックされていない）
+     */
     @Override
     public boolean isAccountNonLocked() {
-        return true; // アカウントがロックされていないかを示す
+        return true;
     }
 
+    /**
+     * 資格情報（パスワード）が期限切れでないかどうかを示します。
+     *
+     * @return true（資格情報は常に有効）
+     */
     @Override
     public boolean isCredentialsNonExpired() {
-        return true; // 資格情報（パスワード）が期限切れでないかを示す
+        return true;
     }
 
+    /**
+     * ユーザーが有効かどうかを示します。
+     * カスタムUserエンティティの{@code isEnabled()}メソッドを使用します。
+     *
+     * @return ユーザーが有効である場合はtrue
+     */
     @Override
     public boolean isEnabled() {
-        return user.isEnabled(); // カスタム User エンティティでユーザーが有効かどうかを返す
+        return user.isEnabled();
     }
 
-    // カスタム User エンティティにアクセスするための追加メソッド
+    /**
+     * カスタムUserエンティティを取得します。
+     *
+     * @return カスタムUserエンティティ
+     */
     public User getUser() {
         return user;
     }
