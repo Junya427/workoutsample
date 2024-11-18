@@ -52,7 +52,7 @@ public class OperationLogService {
      * @param action 操作内容（部分一致）
      * @param startDate 検索範囲の開始日時
      * @param endDate 検索範囲の終了日時
-     * @return {@link OperationLogDTO}のリスト
+     * @return {@link OperationLogDTO}リスト
      */
     public List<OperationLogDTO> searchLogs(String username, String action, LocalDateTime startDate, LocalDateTime endDate) {
         return operationLogRepository.findAll().stream()
