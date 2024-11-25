@@ -52,3 +52,10 @@
 ## ドキュメント
 
 [Javadoc ドキュメント](https://Junya427.github.io/workoutsample/)
+
+## システム要件
+
+- Java: JDK 21 またはそれ以降
+- データベース: PostgreSQL 14.x 以上
+- データベース名、ユーザー名、パスワードは application.yml または application.properties で設定します。
+- ビルドツール: Gradle または Maven（推奨：Gradle）
